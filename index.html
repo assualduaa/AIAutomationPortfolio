@@ -646,6 +646,32 @@
       to   { opacity: 1; transform: scale(1) rotate(0deg); }
     }
 
+    /* ─── PRODUCT CATALOGUE FLOAT (fixed, under the CSM badge) ─── */
+    .poster-float {
+      position: fixed; top: 156px; right: 18px; z-index: 999;
+      width: 80px; padding: 0; cursor: zoom-in; font: inherit;
+      background: #fff; border: 2px solid var(--orange); border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(255,102,0,0.35), 0 0 0 4px rgba(255,102,0,0.1);
+      transform: rotate(3deg);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: badgePop 0.6s 1.1s cubic-bezier(0.34,1.56,0.64,1) both, posterBob 3.5s 1.8s ease-in-out infinite;
+    }
+    .poster-float img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .poster-float-label {
+      position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%);
+      font-size: 0.64rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #fff; background: var(--orange); border-radius: 999px; padding: 0.15rem 0.6rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    }
+    .poster-float:hover, .poster-float:focus-visible {
+      transform: rotate(0deg) scale(1.12); animation-play-state: paused, paused;
+      box-shadow: 0 10px 28px rgba(255,102,0,0.55), 0 0 0 5px rgba(255,102,0,0.18);
+    }
+    .poster-float:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    @keyframes posterBob { 0%,100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+    @media (max-width: 700px) { .poster-float { display: none; } }
+    @media (prefers-reduced-motion: reduce) { .poster-float { animation: none; } }
+
     /* ─── WHATSAPP BUTTON (fixed bottom-right) ─── */
     .wa-float {
       position: fixed;
@@ -698,6 +724,186 @@
     .footer-logo-svg { width: 28px; height: 28px; }
     footer p { color: var(--grey-dim); font-size: 0.78rem; }
 
+    /* ─── AI SOLUTIONS ─── */
+    .solutions-grid { grid-template-columns: repeat(3, 1fr); }
+    .solution-card .project-num { font-size: 2.2rem; }
+    .solution-status {
+      align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #4ade80; background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.28); border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+    }
+    .solution-status::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+    }
+    .solution-ico { display: inline-block; margin-right: 0.25rem; }
+    @media (max-width: 1000px) { .solutions-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .solutions-grid { grid-template-columns: 1fr; } }
+
+    /* ─── HERO CTA: DELIVERED AI PRODUCTS (sits in .hero-links row) ─── */
+    .hero-links a.hero-cta {
+      gap: 0.55rem;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      border: 1px solid transparent;
+      color: #fff; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em;
+      padding: 0.45rem 1.15rem; border-radius: 8px;
+      box-shadow: 0 0 0 0 rgba(255,102,0,0.55);
+      animation: ctaPulse 2.4s ease-out infinite;
+    }
+    .hero-links a.hero-cta:hover {
+      color: #fff; transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--orange-light), var(--orange));
+      border-color: transparent; box-shadow: 0 8px 24px rgba(255,102,0,0.45);
+    }
+    .hero-links a.hero-cta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    .hero-cta-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+    .hero-cta-count { background: rgba(0,0,0,0.25); border-radius: 999px; font-size: 0.7rem; padding: 0.05rem 0.5rem; }
+    .hero-cta-arrow { display: inline-block; animation: ctaBounce 1.4s ease-in-out infinite; }
+    @keyframes ctaPulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,102,0,0.55); }
+      70% { box-shadow: 0 0 0 12px rgba(255,102,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,102,0,0); }
+    }
+    @keyframes ctaBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+    /* highlighted nav pill */
+    nav ul a.nav-highlight {
+      color: #fff; background: var(--orange-soft);
+      border: 1px solid var(--border); border-radius: 999px; padding: 0.25rem 0.8rem;
+    }
+    nav ul a.nav-highlight::after { display: none; }
+    nav ul a.nav-highlight:hover { background: var(--orange); color: #fff; }
+    /* glow when the section is reached */
+    #ai-solutions .section-title .icon { box-shadow: 0 0 14px var(--orange-glow); }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-links a.hero-cta, .hero-cta-arrow { animation: none; }
+    }
+
+    /* ─── AI SOLUTIONS: POSTER PREVIEW + LIGHTBOX ─── */
+    .sol-intro {
+      display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,0.8fr);
+      gap: 3rem; align-items: center; margin-bottom: 3rem;
+    }
+    .sol-intro-text .summary-text { margin-bottom: 1.5rem; }
+    .sol-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+    .sol-facts li {
+      font-size: 0.78rem; font-weight: 600; color: var(--grey);
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border-dim);
+      border-radius: 999px; padding: 0.3rem 0.85rem;
+    }
+    .sol-facts li strong { color: var(--orange-light); font-size: 0.9rem; margin-right: 0.15rem; }
+    .sol-open {
+      display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 700; color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      border: 0; border-radius: 10px; padding: 0.7rem 1.3rem;
+      box-shadow: 0 8px 24px rgba(255,102,0,0.3);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .sol-open:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,102,0,0.45); }
+
+    .sol-poster {
+      position: relative; justify-self: end; width: 100%; max-width: 330px;
+      background: none; border: 0; padding: 0; cursor: zoom-in; font: inherit; color: inherit;
+      perspective: 900px;
+    }
+    .sol-poster-stack, .sol-poster-stack::before {
+      position: absolute; inset: 0; border-radius: 18px;
+      background: var(--bg3); border: 1px solid var(--border);
+    }
+    .sol-poster-stack { transform: rotate(-5deg) translate(-12px, 6px); opacity: 0.7; transition: transform 0.4s; }
+    .sol-poster-stack::before { content: ''; transform: rotate(9deg) translate(26px, -2px); opacity: 0.6; }
+    .sol-poster-frame {
+      position: relative; display: block; overflow: hidden;
+      height: 400px; border-radius: 18px;
+      border: 1px solid var(--border); background: #fff;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 6px rgba(255,102,0,0.06), 0 0 60px rgba(255,102,0,0.18);
+      transform: rotate(2deg);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: posterFloat 6s ease-in-out infinite;
+    }
+    .sol-poster-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.6s ease; }
+    .sol-poster-fade {
+      position: absolute; inset: auto 0 0 0; height: 55%;
+      background: linear-gradient(to top, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.35) 55%, transparent 100%);
+    }
+    .sol-poster-cta {
+      position: absolute; left: 50%; bottom: 1.1rem; transform: translateX(-50%);
+      display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap;
+      font-size: 0.78rem; font-weight: 700; color: #fff;
+      background: rgba(255,102,0,0.92); border-radius: 999px; padding: 0.5rem 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+    .sol-poster-tag {
+      position: absolute; top: -0.7rem; left: 1rem; z-index: 2;
+      font-size: 0.66rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #fff; background: var(--orange); border-radius: 999px; padding: 0.25rem 0.75rem;
+      box-shadow: 0 4px 14px rgba(255,102,0,0.5);
+    }
+    .sol-poster:hover .sol-poster-frame, .sol-poster:focus-visible .sol-poster-frame {
+      transform: rotate(0deg) translateY(-6px) scale(1.02); animation-play-state: paused;
+      box-shadow: 0 28px 60px rgba(0,0,0,0.55), 0 0 0 6px rgba(255,102,0,0.12), 0 0 80px rgba(255,102,0,0.3);
+    }
+    .sol-poster:hover .sol-poster-frame img { transform: scale(1.05); }
+    .sol-poster:hover .sol-poster-stack { transform: rotate(-8deg) translate(-20px, 8px); }
+    .sol-poster:focus-visible, .sol-open:focus-visible { outline: 3px solid var(--orange-light); outline-offset: 6px; border-radius: 18px; }
+    @keyframes posterFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
+    .lightbox {
+      position: fixed; inset: 0; z-index: 3000; display: flex; flex-direction: column;
+      background: rgba(10,10,10,0.92); backdrop-filter: blur(8px);
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .lightbox[hidden] { display: none; }
+    .lightbox.open { opacity: 1; }
+    .lb-toolbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.7rem 1.25rem; border-bottom: 1px solid var(--border);
+      background: rgba(30,30,30,0.9);
+    }
+    .lb-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
+    .lb-actions { display: flex; align-items: center; gap: 0.4rem; }
+    .lb-btn {
+      min-width: 38px; height: 38px; padding: 0 0.8rem; cursor: pointer;
+      font: inherit; font-size: 1.15rem; font-weight: 700; color: var(--white);
+      background: rgba(255,255,255,0.07); border: 1px solid var(--border-dim); border-radius: 8px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .lb-btn:hover { background: var(--orange-soft); border-color: var(--border); }
+    .lb-btn:focus-visible { outline: 2px solid var(--orange-light); outline-offset: 2px; }
+    .lb-reset { font-size: 0.78rem; }
+    .lb-close { background: var(--orange); border-color: transparent; font-size: 1.4rem; }
+    .lb-close:hover { background: var(--orange-light); }
+    .lb-zoom { min-width: 3.2rem; text-align: center; font-size: 0.78rem; color: var(--grey); }
+    .lb-stage { flex: 1; display: flex; overflow: auto; padding: 1.25rem; cursor: zoom-in; -webkit-overflow-scrolling: touch; }
+    .lb-stage.zoomed { cursor: grab; }
+    .lb-stage.dragging { cursor: grabbing; user-select: none; }
+    .lb-stage img {
+      margin: auto; flex: none; display: block; border-radius: 10px; background: #fff;
+      height: calc(100vh - 150px); width: auto; max-width: none;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+    .lb-hint { text-align: center; font-size: 0.72rem; color: var(--grey-dim); padding: 0.5rem 1rem 0.8rem; }
+    body.lb-lock { overflow: hidden; }
+
+    @media (max-width: 860px) {
+      .sol-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sol-poster { justify-self: center; max-width: 300px; }
+      .sol-poster-frame { height: 360px; }
+    }
+    @media (max-width: 700px) {
+      .lb-title { display: none; }
+      .lb-toolbar { justify-content: flex-end; padding: 0.6rem 0.8rem; }
+      .lb-stage { padding: 0.75rem; }
+      .lb-stage img { height: calc(100vh - 130px); }
+      .lb-hint { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sol-poster-frame { animation: none; }
+      .sol-poster-frame, .sol-poster-frame img, .sol-poster-stack, .lightbox { transition: none; }
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 700px) {
       .hero h1 { font-size: 2rem; }
@@ -729,6 +935,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#ai-solutions" class="nav-highlight">AI Solutions</a></li>
     <li><a href="#recommendations">Reviews</a></li>
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#education">Education</a></li>
@@ -762,6 +969,12 @@
       <a href="tel:+971525804840">📞&nbsp; +971 52 580 4840</a>
       <a href="https://www.linkedin.com/in/asnasherinep/" target="_blank">🔗&nbsp; LinkedIn</a>
       <a href="https://github.com/assualduaa" target="_blank">⌥&nbsp; GitHub</a>
+      <a class="hero-cta" href="#ai-solutions">
+        <span class="hero-cta-dot" aria-hidden="true"></span>
+        Delivered AI Products
+        <span class="hero-cta-count">11</span>
+        <span class="hero-cta-arrow" aria-hidden="true">&darr;</span>
+      </a>
     </div>
 
     <div class="hero-badges">
@@ -1188,6 +1401,125 @@
   </div>
 </section>
 
+<!-- ── AI PROJECTS &amp; INTELLIGENT SOLUTIONS ── -->
+<section id="ai-solutions">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🧠</span> Delivered AI Products &amp; Intelligent Solutions</div>
+    <div class="sol-intro">
+      <div class="sol-intro-text">
+        <p class="summary-text reveal delay-1">
+          AI applications, intelligent automation systems, and data-driven solutions designed to streamline business operations, reduce manual effort, and improve decision-making.
+        </p>
+        <ul class="sol-facts reveal delay-2" aria-label="Catalogue highlights">
+          <li><strong>11</strong> AI products</li>
+          <li>AI · Automation · Agents</li>
+          <li>Data · Web</li>
+        </ul>
+        <button type="button" class="sol-open reveal delay-3" data-lightbox-open>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+          View the product catalogue
+        </button>
+      </div>
+
+      <button type="button" class="sol-poster reveal delay-2" data-lightbox-open
+              aria-haspopup="dialog" aria-controls="posterLightbox"
+              aria-label="Open the AI products catalogue poster in full size">
+        <span class="sol-poster-stack" aria-hidden="true"></span>
+        <span class="sol-poster-frame">
+          <img src="./assets/ai-products-poster-thumb.webp" width="560" height="695" loading="lazy" decoding="async"
+               alt="Poster listing 11 AI products: RAG bot, document processing, resource optimization, n8n assistants, Power BI dashboards and more." />
+          <span class="sol-poster-fade" aria-hidden="true"></span>
+          <span class="sol-poster-cta" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            Tap to view full poster
+          </span>
+        </span>
+        <span class="sol-poster-tag" aria-hidden="true">Product Catalogue</span>
+      </button>
+    </div>
+
+    <div class="projects-grid solutions-grid">
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">01</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔎</span> RAG-Based AI Bot</h4>
+        <p>An AI-powered document intelligence application that uses Retrieval-Augmented Generation (RAG), vector search, and LLMs to answer questions from uploaded documents with source citations.</p>
+        <div class="project-tags"><span class="project-tag">RAG</span><span class="project-tag">Vector Search</span><span class="project-tag">LLM</span><span class="project-tag">Source Citations</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">02</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📄</span> Intelligent Document Processing &amp; Classification</h4>
+        <p>An AI-powered document processing solution for OCR, document classification, information extraction, and conversion of unstructured documents into structured data.</p>
+        <div class="project-tags"><span class="project-tag">OCR</span><span class="project-tag">Classification</span><span class="project-tag">Data Extraction</span><span class="project-tag">Structured Data</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">03</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🗓️</span> Resource Optimization Platform</h4>
+        <p>A resource planning application that supports project assignments, workforce availability tracking, capacity planning, and resource utilization.</p>
+        <div class="project-tags"><span class="project-tag">Resource Planning</span><span class="project-tag">Capacity Planning</span><span class="project-tag">Utilization</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">04</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">💬</span> n8n Business AI Assistant</h4>
+        <p>An AI-powered business assistant integrating n8n, Gemini, and MySQL to answer business questions using live database data and validated SQL queries.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Gemini</span><span class="project-tag">MySQL</span><span class="project-tag">SQL Validation</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">05</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧲</span> n8n Lead Data Extraction Agent</h4>
+        <p>An AI automation workflow that extracts and structures lead information, reducing repetitive manual data-processing tasks.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span><span class="project-tag">Lead Data</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">06</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📊</span> Power BI Dashboards</h4>
+        <p>Interactive Power BI dashboards that visualize business KPIs, analyze operational data, and provide actionable insights for informed decision-making.</p>
+        <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">KPIs</span><span class="project-tag">Dashboards</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">07</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📈</span> AI-Powered Market Analysis</h4>
+        <p>An AI-powered market research solution designed to analyze market information, identify trends, explore opportunities, and support business decisions.</p>
+        <div class="project-tags"><span class="project-tag">Market Research</span><span class="project-tag">Trend Analysis</span><span class="project-tag">AI</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">08</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📇</span> E-Visiting Card Application</h4>
+        <p>A digital business card application that enables professionals to share contact details through a mobile-friendly interface and QR codes.</p>
+        <div class="project-tags"><span class="project-tag">Digital Card</span><span class="project-tag">QR Code</span><span class="project-tag">Mobile-Friendly</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">09</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧭</span> Job Search Assistant</h4>
+        <p>An AI-powered career assistant that helps users discover relevant job opportunities through intelligent search and personalized recommendations.</p>
+        <div class="project-tags"><span class="project-tag">AI Assistant</span><span class="project-tag">Job Search</span><span class="project-tag">Recommendations</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">10</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📝</span> Resume Writing Assistant</h4>
+        <p>An AI-powered resume improvement tool that enhances professional formatting, optimizes relevant keywords, and supports ATS-friendly resumes.</p>
+        <div class="project-tags"><span class="project-tag">Resume</span><span class="project-tag">ATS-Friendly</span><span class="project-tag">Keyword Optimization</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">11</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔬</span> Research Assistant</h4>
+        <p>An AI-powered research tool that finds, analyzes, and summarizes information to accelerate research and simplify information gathering.</p>
+        <div class="project-tags"><span class="project-tag">Research</span><span class="project-tag">Summarization</span><span class="project-tag">AI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── RECOMMENDATIONS ── -->
 <section id="recommendations">
   <div class="container">
@@ -1390,6 +1722,13 @@
 <!-- ── CSM BADGE FLOAT (top-right) ── -->
 <img src="./assets/badge.png" class="csm-badge-float" alt="Certified Scrum Master" title="Certified Scrum Master — Scrum Alliance" />
 
+<!-- ── PRODUCT CATALOGUE FLOAT (under CSM badge) ── -->
+<button type="button" class="poster-float" data-lightbox-open aria-haspopup="dialog" aria-controls="posterLightbox"
+        aria-label="View the AI products catalogue poster" title="View AI Products Catalogue">
+  <img src="./assets/ai-products-poster-thumb.webp" width="80" height="99" decoding="async" alt="" />
+  <span class="poster-float-label">View</span>
+</button>
+
 <!-- ── WHATSAPP FLOAT (bottom-right) ── -->
 <a href="https://wa.me/971525804840" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <div class="wa-pulse"></div>
@@ -1399,6 +1738,25 @@
 </a>
 
 <!-- ── SCRIPTS ── -->
+<!-- ── POSTER LIGHTBOX ── -->
+<div class="lightbox" id="posterLightbox" role="dialog" aria-modal="true" aria-label="AI products catalogue poster" hidden>
+  <div class="lb-toolbar">
+    <span class="lb-title">AI Products Catalogue</span>
+    <div class="lb-actions">
+      <button type="button" class="lb-btn" data-lb="out" aria-label="Zoom out">&minus;</button>
+      <span class="lb-zoom" id="lbZoom" aria-live="polite">100%</span>
+      <button type="button" class="lb-btn" data-lb="in" aria-label="Zoom in">+</button>
+      <button type="button" class="lb-btn lb-reset" data-lb="reset" aria-label="Reset zoom">Reset</button>
+      <button type="button" class="lb-btn lb-close" data-lb="close" aria-label="Close poster">&times;</button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" data-src="./assets/ai-products-poster.webp" width="928" height="1152" draggable="false"
+         alt="AI products catalogue poster listing 11 products: RAG-based AI bot, intelligent document processing, resource optimization platform, n8n business AI assistant, n8n lead data extraction agent, Power BI dashboards, AI market analysis, e-visiting card, job search assistant, resume writing assistant and research assistant." />
+  </div>
+  <div class="lb-hint">Click the poster or use + / &minus; to zoom &middot; drag to move &middot; Esc to close</div>
+</div>
+
 <script>
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
@@ -1428,6 +1786,88 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+  // ── Poster lightbox (zoom, drag-to-pan, keyboard, focus return) ──
+  (function () {
+    const box = document.getElementById('posterLightbox');
+    if (!box) return;
+    const stage = document.getElementById('lbStage');
+    const img = document.getElementById('lbImg');
+    const label = document.getElementById('lbZoom');
+    const MIN = 1, MAX = 3, STEP = 0.5;
+    let scale = 1, lastFocus = null, drag = null, moved = false;
+
+    function fitHeight() { return window.innerHeight - (window.innerWidth <= 700 ? 130 : 150); }
+    function apply() {
+      img.style.height = (fitHeight() * scale) + 'px';
+      stage.classList.toggle('zoomed', scale > 1);
+      label.textContent = Math.round(scale * 100) + '%';
+    }
+    function setScale(v) { scale = Math.min(MAX, Math.max(MIN, v)); apply(); if (scale === 1) { stage.scrollTop = 0; stage.scrollLeft = 0; } }
+
+    function open(trigger) {
+      lastFocus = trigger || document.activeElement;
+      if (!img.getAttribute('src')) img.src = img.dataset.src;
+      box.hidden = false;
+      document.body.classList.add('lb-lock');
+      scale = 1; apply();
+      requestAnimationFrame(() => box.classList.add('open'));
+      box.querySelector('[data-lb="close"]').focus();
+    }
+    function close() {
+      box.classList.remove('open');
+      document.body.classList.remove('lb-lock');
+      setTimeout(() => { box.hidden = true; }, 220);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('[data-lightbox-open]').forEach(b => b.addEventListener('click', () => open(b)));
+    box.addEventListener('click', (e) => {
+      const act = e.target.closest('[data-lb]');
+      if (!act) return;
+      const a = act.dataset.lb;
+      if (a === 'close') close();
+      else if (a === 'in') setScale(scale + STEP);
+      else if (a === 'out') setScale(scale - STEP);
+      else if (a === 'reset') setScale(1);
+    });
+
+    // click image to toggle zoom; click empty backdrop to close
+    img.addEventListener('click', () => { if (!moved) setScale(scale > 1 ? 1 : 2); });
+    stage.addEventListener('click', (e) => { if (e.target === stage && !moved) close(); });
+
+    // drag to pan when zoomed
+    stage.addEventListener('pointerdown', (e) => {
+      if (scale <= 1) return;
+      drag = { x: e.clientX, y: e.clientY, l: stage.scrollLeft, t: stage.scrollTop };
+      moved = false; stage.setPointerCapture(e.pointerId); stage.classList.add('dragging');
+    });
+    stage.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+      stage.scrollLeft = drag.l - dx; stage.scrollTop = drag.t - dy;
+    });
+    const endDrag = () => { drag = null; stage.classList.remove('dragging'); setTimeout(() => { moved = false; }, 0); };
+    stage.addEventListener('pointerup', endDrag);
+    stage.addEventListener('pointercancel', endDrag);
+
+    // keyboard: Esc closes, +/- zoom, Tab stays inside the dialog
+    document.addEventListener('keydown', (e) => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === '+' || e.key === '=') setScale(scale + STEP);
+      else if (e.key === '-') setScale(scale - STEP);
+      else if (e.key === '0') setScale(1);
+      else if (e.key === 'Tab') {
+        const f = box.querySelectorAll('button');
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener('resize', () => { if (!box.hidden) apply(); });
+  })();
 </script>
 
   <script>
