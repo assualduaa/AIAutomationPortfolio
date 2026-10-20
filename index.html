@@ -738,6 +738,10 @@
     .solution-status::before {
       content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
     }
+    .solution-status.in-dev {
+      color: #fbbf24; background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.32);
+    }
+    .solution-status.in-dev::before { background: #fbbf24; }
     .solution-ico { display: inline-block; margin-right: 0.25rem; }
     @media (max-width: 1000px) { .solutions-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 700px) { .solutions-grid { grid-template-columns: 1fr; } }
@@ -932,10 +936,10 @@
   </div>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#ai-solutions" class="nav-highlight">AI Solutions</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#ai-solutions" class="nav-highlight">AI Solutions</a></li>
     <li><a href="#recommendations">Reviews</a></li>
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#education">Education</a></li>
@@ -1020,6 +1024,133 @@
     <p class="summary-text reveal delay-1">
       AI Automation Engineer, Claude Expert, and Certified Scrum Master with 10+ years of experience across AI automation, Generative AI, data analytics, IT, CRM, and digital operations. I design and build AI-powered workflows, LLM pipelines, RAG solutions, AI agents, and API integrations that reduce manual effort and improve operational efficiency. My expertise combines Claude, n8n, GenAI, Python, CRM automation, Power BI, DAX, SQL, and ETL, enabling me to connect intelligent automation with data-driven business decisions. I have delivered AI automation and CRM analytics solutions within UAE-based business and government contexts, including project-based work as an AI Automation Specialist at Innovyx Technology Solutions and AI/CRM analytics work at EGC Properties, Abu Dhabi.
     </p>
+  </div>
+</section>
+
+<!-- ── AI PROJECTS &amp; INTELLIGENT SOLUTIONS ── -->
+<section id="ai-solutions">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🧠</span> Delivered AI Products &amp; Intelligent Solutions</div>
+    <div class="sol-intro">
+      <div class="sol-intro-text">
+        <p class="summary-text reveal delay-1">
+          AI applications, intelligent automation systems, and data-driven solutions designed to streamline business operations, reduce manual effort, and improve decision-making.
+        </p>
+        <ul class="sol-facts reveal delay-2" aria-label="Catalogue highlights">
+          <li><strong>11</strong> AI products</li>
+          <li>AI · Automation · Agents</li>
+          <li>Data · Web</li>
+        </ul>
+        <button type="button" class="sol-open reveal delay-3" data-lightbox-open>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+          View the product catalogue
+        </button>
+      </div>
+
+      <button type="button" class="sol-poster reveal delay-2" data-lightbox-open
+              aria-haspopup="dialog" aria-controls="posterLightbox"
+              aria-label="Open the AI products catalogue poster in full size">
+        <span class="sol-poster-stack" aria-hidden="true"></span>
+        <span class="sol-poster-frame">
+          <img src="./assets/ai-products-ready-poster-thumb.webp" width="560" height="840" loading="lazy" decoding="async"
+               alt="Poster listing 11 AI products: RAG bot, document processing, resource optimization, n8n assistants, Power BI dashboards and more." />
+          <span class="sol-poster-fade" aria-hidden="true"></span>
+          <span class="sol-poster-cta" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            Tap to view full poster
+          </span>
+        </span>
+        <span class="sol-poster-tag" aria-hidden="true">Product Catalogue</span>
+      </button>
+    </div>
+
+    <div class="projects-grid solutions-grid">
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">01</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔎</span> RAG-Based AI Bot</h4>
+        <p>An AI-powered document intelligence application that uses Retrieval-Augmented Generation (RAG), vector search, and LLMs to answer questions from uploaded documents with source citations.</p>
+        <div class="project-tags"><span class="project-tag">RAG</span><span class="project-tag">Vector Search</span><span class="project-tag">LLM</span><span class="project-tag">Source Citations</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank" rel="noopener">↗ github.com/assualduaa/AIFileIntelligenceBot</a>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">02</span>
+        <span class="solution-status in-dev">Under Development</span>
+        <h4><span class="solution-ico" aria-hidden="true">🗓️</span> Resource Optimization Platform</h4>
+        <p>A resource planning application that supports project assignments, workforce availability tracking, capacity planning, and resource utilization.</p>
+        <div class="project-tags"><span class="project-tag">Resource Planning</span><span class="project-tag">Capacity Planning</span><span class="project-tag">Utilization</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/ResourceOptimization" target="_blank" rel="noopener">↗ github.com/assualduaa/ResourceOptimization</a>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">03</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📄</span> Intelligent Document Processing &amp; Classification</h4>
+        <p>An AI-powered document processing solution for OCR, document classification, information extraction, and conversion of unstructured documents into structured data.</p>
+        <div class="project-tags"><span class="project-tag">OCR</span><span class="project-tag">Classification</span><span class="project-tag">Data Extraction</span><span class="project-tag">Structured Data</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIBasedDocumentProcessor" target="_blank" rel="noopener">↗ github.com/assualduaa/AIBasedDocumentProcessor</a>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">04</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📇</span> E-Visiting Card Application</h4>
+        <p>A digital business card application that enables professionals to share contact details through a mobile-friendly interface and QR codes.</p>
+        <div class="project-tags"><span class="project-tag">Digital Card</span><span class="project-tag">QR Code</span><span class="project-tag">Mobile-Friendly</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/SmartE-VisitngCard-QRBased" target="_blank" rel="noopener">↗ github.com/assualduaa/SmartE-VisitngCard-QRBased</a>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">05</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">💬</span> n8n Business AI Assistant</h4>
+        <p>An AI-powered business assistant integrating n8n, Gemini, and MySQL to answer business questions using live database data and validated SQL queries.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Gemini</span><span class="project-tag">MySQL</span><span class="project-tag">SQL Validation</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/n8nBusinessAssistant" target="_blank" rel="noopener">↗ github.com/assualduaa/n8nBusinessAssistant</a>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">06</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧲</span> n8n Lead Data Extraction Agent</h4>
+        <p>An AI automation workflow that extracts and structures lead information, reducing repetitive manual data-processing tasks.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span><span class="project-tag">Lead Data</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent" target="_blank" rel="noopener">↗ github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent</a>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">07</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔬</span> Research Assistant</h4>
+        <p>An AI-powered research tool that finds, analyzes, and summarizes information to accelerate research and simplify information gathering.</p>
+        <div class="project-tags"><span class="project-tag">Research</span><span class="project-tag">Summarization</span><span class="project-tag">AI</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">08</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📈</span> AI-Powered Market Analysis</h4>
+        <p>An AI-powered market research solution designed to analyze market information, identify trends, explore opportunities, and support business decisions.</p>
+        <div class="project-tags"><span class="project-tag">Market Research</span><span class="project-tag">Trend Analysis</span><span class="project-tag">AI</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AI-basedLeadGenerationSystem" target="_blank" rel="noopener">↗ github.com/assualduaa/AI-basedLeadGenerationSystem</a>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">09</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧭</span> Job Search Assistant</h4>
+        <p>An AI-powered career assistant that helps users discover relevant job opportunities through intelligent search and personalized recommendations.</p>
+        <div class="project-tags"><span class="project-tag">AI Assistant</span><span class="project-tag">Job Search</span><span class="project-tag">Recommendations</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">10</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📝</span> Resume Writing Assistant</h4>
+        <p>An AI-powered resume improvement tool that enhances professional formatting, optimizes relevant keywords, and supports ATS-friendly resumes.</p>
+        <div class="project-tags"><span class="project-tag">Resume</span><span class="project-tag">ATS-Friendly</span><span class="project-tag">Keyword Optimization</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">11</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📊</span> Power BI Dashboards</h4>
+        <p>Interactive Power BI dashboards that visualize business KPIs, analyze operational data, and provide actionable insights for informed decision-making.</p>
+        <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">KPIs</span><span class="project-tag">Dashboards</span></div>
+        <a class="project-link" href="https://github.com/assualduaa" target="_blank" rel="noopener">↗ github.com/assualduaa</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1230,7 +1361,7 @@
         <div>
           <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#6EE7B7; margin-bottom:0.3rem;">Currently Working</div>
           <div style="font-size:0.98rem; font-weight:700; color:var(--white);">AI Automation Engineer <span style="color:var(--grey-dim); font-weight:500;">— Project-Based</span> <span class="exp-sep">—</span> <span class="exp-company">Innovyx Technology Solutions</span></div>
-          <div style="font-size:0.83rem; color:var(--grey); margin-top:0.4rem; max-width:640px; line-height:1.6;">Building the <strong style="color:var(--text);">AI Intelligence Bot (RAG based Agentic Workflow System)</strong> — a Python-based agentic AI automation project using the Mistral API, LangChain, and FAISS for RAG-driven task execution.</div>
+          <div style="font-size:0.83rem; color:var(--grey); margin-top:0.4rem; max-width:640px; line-height:1.6;">Now building the <strong style="color:var(--text);">Resource Optimization Platform</strong> — workforce planning and resource allocation with availability tracking, capacity planning, and utilization insights. Recently delivered the <strong style="color:var(--text);">AI Intelligence Bot (RAG-based Agentic Workflow System)</strong>, a Python-based agentic AI system using the Mistral API, LangChain, and FAISS.</div>
         </div>
       </div>
       <a href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank" style="flex-shrink:0; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.83rem; font-weight:600; color:var(--orange); border:1px solid var(--border); padding:0.5rem 1rem; border-radius:8px;">↗ View Project</a>
@@ -1336,7 +1467,7 @@
       <div class="project-card reveal delay-1">
         <span class="project-num">01</span>
         <h4>AI-based Document Processor</h4>
-        <p>End-to-end LLM pipeline for automated PDF ingestion, intelligent text extraction, document classification, and structured data output — built for an Abu Dhabi government entity using LLM orchestration and prompt engineering.</p>
+        <p>End-to-end LLM pipeline for automated PDF ingestion, intelligent text extraction, document classification, and structured data output — built for an Abu Dhabi government entity using LLM orchestration and prompt engineering. Turns unstructured PDFs into clean, structured records ready for review and downstream systems, cutting manual document handling.</p>
         <div class="project-tags"><span class="project-tag">LLM Pipeline</span><span class="project-tag">Python</span><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span></div>
         <a class="project-link" href="https://github.com/assualduaa/AIBasedDocumentProcessor" target="_blank">↗ github.com/assualduaa/AIBasedDocumentProcessor</a>
       </div>
@@ -1352,7 +1483,7 @@
       <div class="project-card reveal delay-3" style="border-top:2px solid var(--orange);">
         <span class="project-num">03</span>
         <h4>🔵 RAG-based Intelligence Bot <span style="font-weight:500; color:var(--grey);">(Agentic Workflow System)</span></h4>
-        <p>An agentic AI automation system in Python that orchestrates autonomous, multi-step task workflows using the Mistral API, LangChain, and a FAISS vector store. Combines RAG-based semantic search with LLM-driven decision-making for context-aware, memory-enabled automation. <em style="color:var(--orange-light); font-style:normal;">Currently in active development.</em></p>
+        <p>An agentic AI automation system in Python that orchestrates autonomous, multi-step task workflows using the Mistral API, LangChain, and a FAISS vector store. Combines RAG-based semantic search with LLM-driven decision-making for context-aware, memory-enabled automation. Delivers answers grounded in uploaded documents, so teams find information faster without manual searching. <em style="color:var(--orange-light); font-style:normal;">Deployed.</em></p>
         <div class="project-tags"><span class="project-tag">Agentic AI</span><span class="project-tag">Python</span><span class="project-tag">Mistral API</span><span class="project-tag">LangChain</span><span class="project-tag">FAISS</span><span class="project-tag">RAG</span></div>
         <a class="project-link" href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank">↗ github.com/assualduaa/AIFileIntelligenceBot</a>
       </div>
@@ -1368,7 +1499,7 @@
       <div class="project-card reveal delay-1">
         <span class="project-num">05</span>
         <h4>EGC Properties CRM &amp; Sales Analytics Dashboard</h4>
-        <p>Power BI dashboards integrated with Bitrix24 CRM and real estate portal data to track property sales trends, agent KPIs, and pipeline conversion — with RLS, scheduled refresh, and advanced DAX measures.</p>
+        <p>Power BI dashboards integrated with Bitrix24 CRM and real estate portal data to track property sales trends, agent KPIs, and pipeline conversion — with RLS, scheduled refresh, and advanced DAX measures. Gives sales leaders one live view of agent performance and pipeline health in place of manual reporting.</p>
         <div class="project-tags"><span class="project-tag">Bitrix24</span><span class="project-tag">Power BI</span><span class="project-tag">DAX</span><span class="project-tag">RLS</span><span class="project-tag">Real Estate</span></div>
         <a class="project-link" href="https://github.com/assualduaa/EGC" target="_blank">↗ github.com/assualduaa/EGC</a>
       </div>
@@ -1376,7 +1507,7 @@
       <div class="project-card reveal delay-2">
         <span class="project-num">06</span>
         <h4>Financial Data Analysis — Loan Portfolio &amp; Profit Forecasting</h4>
-        <p>SQL and Power BI analysis of a loan portfolio dataset covering risk segmentation, profit forecasting, and KPI dashboarding for financial decision support.</p>
+        <p>SQL and Power BI analysis of a loan portfolio dataset covering risk segmentation, profit forecasting, and KPI dashboarding for financial decision support. Helps spot high-risk segments early and compare projected profitability across the portfolio.</p>
         <div class="project-tags"><span class="project-tag">SQL</span><span class="project-tag">Power BI</span><span class="project-tag">Financial Analytics</span><span class="project-tag">DAX</span></div>
         <a class="project-link" href="https://github.com/assualduaa/LoanPortfolioFinancialAnalysis" target="_blank">↗ github.com/assualduaa/LoanPortfolioFinancialAnalysis</a>
       </div>
@@ -1392,130 +1523,11 @@
       <div class="project-card reveal delay-4">
         <span class="project-num">08</span>
         <h4>Inventory &amp; Supply-Chain KPI Analysis</h4>
-        <p>MySQL and Power BI project analyzing inventory levels, supply-chain performance, and operational KPIs to support data-driven stock management decisions.</p>
+        <p>MySQL and Power BI project analyzing inventory levels, supply-chain performance, and operational KPIs to support data-driven stock management decisions. Surfaces slow-moving stock and supply bottlenecks so teams can plan reorders with confidence.</p>
         <div class="project-tags"><span class="project-tag">MySQL</span><span class="project-tag">Power BI</span><span class="project-tag">Supply Chain</span><span class="project-tag">KPI</span></div>
         <a class="project-link" href="https://github.com/assualduaa/MintClassicSQL" target="_blank">↗ github.com/assualduaa/MintClassicSQL</a>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ── AI PROJECTS &amp; INTELLIGENT SOLUTIONS ── -->
-<section id="ai-solutions">
-  <div class="container">
-    <div class="section-title reveal"><span class="icon">🧠</span> Delivered AI Products &amp; Intelligent Solutions</div>
-    <div class="sol-intro">
-      <div class="sol-intro-text">
-        <p class="summary-text reveal delay-1">
-          AI applications, intelligent automation systems, and data-driven solutions designed to streamline business operations, reduce manual effort, and improve decision-making.
-        </p>
-        <ul class="sol-facts reveal delay-2" aria-label="Catalogue highlights">
-          <li><strong>11</strong> AI products</li>
-          <li>AI · Automation · Agents</li>
-          <li>Data · Web</li>
-        </ul>
-        <button type="button" class="sol-open reveal delay-3" data-lightbox-open>
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
-          View the product catalogue
-        </button>
-      </div>
-
-      <button type="button" class="sol-poster reveal delay-2" data-lightbox-open
-              aria-haspopup="dialog" aria-controls="posterLightbox"
-              aria-label="Open the AI products catalogue poster in full size">
-        <span class="sol-poster-stack" aria-hidden="true"></span>
-        <span class="sol-poster-frame">
-          <img src="./assets/ai-products-poster-thumb.webp" width="560" height="695" loading="lazy" decoding="async"
-               alt="Poster listing 11 AI products: RAG bot, document processing, resource optimization, n8n assistants, Power BI dashboards and more." />
-          <span class="sol-poster-fade" aria-hidden="true"></span>
-          <span class="sol-poster-cta" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-            Tap to view full poster
-          </span>
-        </span>
-        <span class="sol-poster-tag" aria-hidden="true">Product Catalogue</span>
-      </button>
-    </div>
-
-    <div class="projects-grid solutions-grid">
-      <div class="project-card solution-card reveal delay-1">
-        <span class="project-num">01</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">🔎</span> RAG-Based AI Bot</h4>
-        <p>An AI-powered document intelligence application that uses Retrieval-Augmented Generation (RAG), vector search, and LLMs to answer questions from uploaded documents with source citations.</p>
-        <div class="project-tags"><span class="project-tag">RAG</span><span class="project-tag">Vector Search</span><span class="project-tag">LLM</span><span class="project-tag">Source Citations</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-2">
-        <span class="project-num">02</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">📄</span> Intelligent Document Processing &amp; Classification</h4>
-        <p>An AI-powered document processing solution for OCR, document classification, information extraction, and conversion of unstructured documents into structured data.</p>
-        <div class="project-tags"><span class="project-tag">OCR</span><span class="project-tag">Classification</span><span class="project-tag">Data Extraction</span><span class="project-tag">Structured Data</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-3">
-        <span class="project-num">03</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">🗓️</span> Resource Optimization Platform</h4>
-        <p>A resource planning application that supports project assignments, workforce availability tracking, capacity planning, and resource utilization.</p>
-        <div class="project-tags"><span class="project-tag">Resource Planning</span><span class="project-tag">Capacity Planning</span><span class="project-tag">Utilization</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-4">
-        <span class="project-num">04</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">💬</span> n8n Business AI Assistant</h4>
-        <p>An AI-powered business assistant integrating n8n, Gemini, and MySQL to answer business questions using live database data and validated SQL queries.</p>
-        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Gemini</span><span class="project-tag">MySQL</span><span class="project-tag">SQL Validation</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-1">
-        <span class="project-num">05</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">🧲</span> n8n Lead Data Extraction Agent</h4>
-        <p>An AI automation workflow that extracts and structures lead information, reducing repetitive manual data-processing tasks.</p>
-        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span><span class="project-tag">Lead Data</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-2">
-        <span class="project-num">06</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">📊</span> Power BI Dashboards</h4>
-        <p>Interactive Power BI dashboards that visualize business KPIs, analyze operational data, and provide actionable insights for informed decision-making.</p>
-        <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">KPIs</span><span class="project-tag">Dashboards</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-3">
-        <span class="project-num">07</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">📈</span> AI-Powered Market Analysis</h4>
-        <p>An AI-powered market research solution designed to analyze market information, identify trends, explore opportunities, and support business decisions.</p>
-        <div class="project-tags"><span class="project-tag">Market Research</span><span class="project-tag">Trend Analysis</span><span class="project-tag">AI</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-4">
-        <span class="project-num">08</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">📇</span> E-Visiting Card Application</h4>
-        <p>A digital business card application that enables professionals to share contact details through a mobile-friendly interface and QR codes.</p>
-        <div class="project-tags"><span class="project-tag">Digital Card</span><span class="project-tag">QR Code</span><span class="project-tag">Mobile-Friendly</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-1">
-        <span class="project-num">09</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">🧭</span> Job Search Assistant</h4>
-        <p>An AI-powered career assistant that helps users discover relevant job opportunities through intelligent search and personalized recommendations.</p>
-        <div class="project-tags"><span class="project-tag">AI Assistant</span><span class="project-tag">Job Search</span><span class="project-tag">Recommendations</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-2">
-        <span class="project-num">10</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">📝</span> Resume Writing Assistant</h4>
-        <p>An AI-powered resume improvement tool that enhances professional formatting, optimizes relevant keywords, and supports ATS-friendly resumes.</p>
-        <div class="project-tags"><span class="project-tag">Resume</span><span class="project-tag">ATS-Friendly</span><span class="project-tag">Keyword Optimization</span></div>
-      </div>
-      <div class="project-card solution-card reveal delay-3">
-        <span class="project-num">11</span>
-        <span class="solution-status">Delivered</span>
-        <h4><span class="solution-ico" aria-hidden="true">🔬</span> Research Assistant</h4>
-        <p>An AI-powered research tool that finds, analyzes, and summarizes information to accelerate research and simplify information gathering.</p>
-        <div class="project-tags"><span class="project-tag">Research</span><span class="project-tag">Summarization</span><span class="project-tag">AI</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -1725,7 +1737,7 @@
 <!-- ── PRODUCT CATALOGUE FLOAT (under CSM badge) ── -->
 <button type="button" class="poster-float" data-lightbox-open aria-haspopup="dialog" aria-controls="posterLightbox"
         aria-label="View the AI products catalogue poster" title="View AI Products Catalogue">
-  <img src="./assets/ai-products-poster-thumb.webp" width="80" height="99" decoding="async" alt="" />
+  <img src="./assets/ai-products-ready-poster-thumb.webp" width="80" height="120" decoding="async" alt="" />
   <span class="poster-float-label">View</span>
 </button>
 
@@ -1751,7 +1763,7 @@
     </div>
   </div>
   <div class="lb-stage" id="lbStage">
-    <img id="lbImg" data-src="./assets/ai-products-poster.webp" width="928" height="1152" draggable="false"
+    <img id="lbImg" data-src="./assets/ai-products-ready-poster.webp" width="1024" height="1536" draggable="false"
          alt="AI products catalogue poster listing 11 products: RAG-based AI bot, intelligent document processing, resource optimization platform, n8n business AI assistant, n8n lead data extraction agent, Power BI dashboards, AI market analysis, e-visiting card, job search assistant, resume writing assistant and research assistant." />
   </div>
   <div class="lb-hint">Click the poster or use + / &minus; to zoom &middot; drag to move &middot; Esc to close</div>
