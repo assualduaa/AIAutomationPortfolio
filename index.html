@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asna Sherin E P — AI Automation Expert | n8n Developer</title>
-  <meta name="description" content="AI Automation Expert specializing in n8n workflows, AI agents, LLM integrations, and business process automation. Abu Dhabi, UAE." />
+  <title>Asna Sherin E P — Forward Deployed AI Engineer | Full-Stack AI Developer</title>
+  <meta name="description" content="Forward Deployed AI Engineer and Full-Stack AI Developer delivering client-centric GenAI solutions — AI agents, MCP integrations, RAG, n8n automation, MongoDB, Oracle Cloud and AWS. Abu Dhabi, UAE." />
   <style>
     :root {
       --orange: #FF6600;
@@ -205,6 +205,54 @@
       animation: fadeInUp 0.7s 0.2s ease both;
     }
     .hero-headline strong { color: var(--orange-light); font-weight: 600; }
+    .hero-designation {
+      display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center;
+      gap: 0.2rem 0.85rem;
+      font-size: 1.55rem; font-weight: 800; letter-spacing: 0.005em; line-height: 1.25;
+      margin-bottom: 0.7rem;
+      animation: fadeInUp 0.7s 0.15s ease both;
+    }
+    .hero-designation .role {
+      background: linear-gradient(90deg, #FFFFFF 0%, #FFD2B0 55%, var(--orange-light) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: #fff;
+    }
+    .hero-designation .sep {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--orange); box-shadow: 0 0 10px var(--orange-glow), 0 0 0 4px var(--orange-soft);
+    }
+    .hero-value {
+      font-size: 1rem; color: var(--grey); max-width: 640px; line-height: 1.6;
+      margin: 0 auto 1.3rem;
+      animation: fadeInUp 0.7s 0.18s ease both;
+    }
+    .hero-value strong { color: var(--white); font-weight: 600; }
+    .hero-value .hl { color: var(--orange-light); font-weight: 600; }
+    .focus-strip {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      gap: 0.5rem; max-width: 820px; margin: 0 auto 1.6rem;
+      animation: fadeInUp 0.7s 0.22s ease both;
+    }
+    .focus-chip {
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+      padding: 0.38rem 0.95rem; border-radius: 999px;
+      color: var(--text); background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .focus-chip:hover { transform: translateY(-2px); border-color: var(--orange); box-shadow: 0 6px 18px rgba(255,102,0,0.18); }
+    .focus-chip.core {
+      color: #fff; border-color: transparent;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      box-shadow: 0 4px 16px var(--orange-glow);
+    }
+    .focus-divider { width: 1px; height: 18px; background: rgba(255,255,255,0.15); margin: 0 0.25rem; }
+    @media (max-width: 640px) {
+      .hero-designation { font-size: 1.2rem; flex-direction: column; }
+      .hero-designation .sep { width: 28px; height: 2px; border-radius: 2px; box-shadow: none; }
+      .focus-divider { display: none; }
+      .focus-chip { font-size: 0.76rem; padding: 0.32rem 0.8rem; }
+    }
     .hero-location {
       font-size: 0.85rem; color: var(--grey-dim);
       margin-bottom: 2rem;
@@ -212,7 +260,7 @@
     }
     .hero-links {
       display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 0.65rem; margin-bottom: 2rem;
+      gap: 0.65rem; margin-bottom: 4.5rem;
       animation: fadeInUp 0.7s 0.4s ease both;
     }
     .hero-links a {
@@ -231,8 +279,8 @@
     }
     .hero-badges {
       display: flex; flex-direction: column; align-items: center;
-      gap: 0.5rem;
-      animation: fadeInUp 0.7s 0.5s ease both;
+      gap: 0.6rem; margin: 0.3rem auto 1.7rem; max-width: 860px;
+      animation: fadeInUp 0.7s 0.3s ease both;
     }
     .badge-row {
       display: flex; flex-wrap: wrap; justify-content: center;
@@ -246,6 +294,8 @@
       transition: all 0.25s; cursor: default;
     }
     .badge:hover { border-color: var(--orange); color: var(--orange-light); background: var(--orange-soft); }
+    .badge-row.core { gap: 0.6rem; margin-bottom: 0.1rem; }
+    .badge-row.status { margin-top: 0.15rem; }
     .badge.green {
       background: rgba(5,150,105,0.12);
       border-color: rgba(52,211,153,0.3); color: #6EE7B7;
@@ -963,9 +1013,35 @@
 
     <div class="hero-tag">📍 Abu Dhabi, UAE &nbsp;·&nbsp; Available Now</div>
     <h1>Asna <span>Sherin</span> E P</h1>
-    <div class="hero-headline">
-      <strong>AI Automation Engineer</strong> &nbsp;|&nbsp; <strong>n8n Developer</strong> &nbsp;|&nbsp; <strong>Agentic AI</strong>
-      &nbsp;|&nbsp; Claude Expert &nbsp;|&nbsp; CRM Specialist &nbsp;|&nbsp; Data &amp; BI Analyst &nbsp;|&nbsp; IT &amp; Real Estate
+    <div class="hero-designation">
+      <span class="role">Forward Deployed AI Engineer</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="role">Full-Stack AI Developer</span>
+    </div>
+    <p class="hero-value">Delivering <strong>client-centric AI solutions</strong> built around each business problem — from discovery to deployed <span class="hl">GenAI</span>, <span class="hl">AI agent</span> and <span class="hl">MCP</span>-powered systems.</p>
+    <div class="hero-badges" aria-label="Key expertise">
+      <div class="badge-row core">
+        <span class="focus-chip core">GenAI</span>
+        <span class="focus-chip core">Agentic AI</span>
+        <span class="focus-chip core">MCP</span>
+        <span class="focus-chip core">RAG</span>
+        <span class="focus-chip core">Claude Expert</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">n8n Automation</span>
+        <span class="badge">API Integration</span>
+        <span class="badge">LLM Integrations</span>
+        <span class="badge">Prompt &amp; Context Engineering</span>
+        <span class="badge">Python · JavaScript</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">Oracle Cloud · AWS</span>
+        <span class="badge">Power BI &amp; DAX</span>
+        <span class="badge">Bitrix24 CRM</span>
+      </div>
+      <div class="badge-row status">
+        <span class="badge green">✔ Immediate Joiner</span>
+        <span class="badge green">UAE Residency (Transferable)</span>
+      </div>
     </div>
 
     <div class="hero-links">
@@ -981,25 +1057,6 @@
       </a>
     </div>
 
-    <div class="hero-badges">
-      <div class="badge-row">
-        <span class="badge">n8n Workflow Automation</span>
-        <span class="badge">AI Agents</span>
-        <span class="badge">Agentic AI</span>
-        <span class="badge">LLM Integrations</span>
-        <span class="badge">Prompt &amp; Context Engineering</span>
-        <span class="badge">API Automation</span>
-        <span class="badge">Python · JavaScript</span>
-      </div>
-      <div class="badge-row">
-        <span class="badge">Power BI &amp; DAX</span>
-        <span class="badge">Azure SQL · T-SQL</span>
-        <span class="badge">Bitrix24 CRM</span>
-        <span class="badge">Real Estate Analytics</span>
-        <span class="badge green">✔ Immediate Joiner</span>
-        <span class="badge green">UAE Residency (Transferable)</span>
-      </div>
-    </div>
   </div>
   <div class="hero-scroll-hint">
     <span>Scroll</span>
@@ -1022,7 +1079,7 @@
   <div class="container">
     <div class="section-title reveal"><span class="icon">👤</span> Professional Summary</div>
     <p class="summary-text reveal delay-1">
-      AI Automation Engineer, Claude Expert, and Certified Scrum Master with 10+ years of experience across AI automation, Generative AI, data analytics, IT, CRM, and digital operations. I design and build AI-powered workflows, LLM pipelines, RAG solutions, AI agents, and API integrations that reduce manual effort and improve operational efficiency. My expertise combines Claude, n8n, GenAI, Python, CRM automation, Power BI, DAX, SQL, and ETL, enabling me to connect intelligent automation with data-driven business decisions. I have delivered AI automation and CRM analytics solutions within UAE-based business and government contexts, including project-based work as an AI Automation Specialist at Innovyx Technology Solutions and AI/CRM analytics work at EGC Properties, Abu Dhabi.
+      Forward Deployed AI Engineer and Full-Stack AI Developer, Claude Expert, and Certified Scrum Master with 10+ years of experience across AI automation, Generative AI, data analytics, IT, CRM, and digital operations. I work directly with clients to understand the business problem first, then design and deliver client-centric GenAI solutions — AI-powered workflows, LLM pipelines, RAG solutions, AI agents, MCP integrations, and API integrations that reduce manual effort and improve operational efficiency. My expertise combines Claude, n8n, GenAI, MCP, Python, MongoDB, Oracle Cloud, AWS, CRM automation, Power BI, DAX, SQL, and ETL, enabling me to connect intelligent automation with data-driven business decisions. I have delivered AI automation and CRM analytics solutions within UAE-based business and government contexts, including project-based work as an AI Automation Specialist at Innovyx Technology Solutions and AI/CRM analytics work at EGC Properties, Abu Dhabi.
     </p>
   </div>
 </section>
@@ -1167,6 +1224,7 @@
         <h4>🤖 Large Language Models (LLMs)</h4>
         <div class="skill-tags">
           <span class="skill-tag">Claude Expert (Anthropic APIs)</span>
+          <span class="skill-tag">Generative AI (GenAI)</span>
           <span class="skill-tag">OpenAI (GPT models)</span><span class="skill-tag">Azure OpenAI</span>
           <span class="skill-tag">Mistral</span><span class="skill-tag">Ollama (Local LLM Deployment)</span>
           <span class="skill-tag">Prompt &amp; Context Engineering</span>
@@ -1244,8 +1302,10 @@
           <span class="skill-tag">Python</span>
           <span class="skill-tag">JavaScript (n8n Function Nodes)</span>
           <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">MongoDB</span>
           <span class="skill-tag">MySQL / PostgreSQL</span>
-          <span class="skill-tag">Azure SQL / SQL Server (T-SQL)</span>
+          <span class="skill-tag">Oracle Cloud (OCI)</span>
+          <span class="skill-tag">AWS</span>
           <span class="skill-tag">Window Functions &amp; Query Tuning</span>
           <span class="skill-tag">Stored Procedures &amp; Views</span>
           <span class="skill-tag">Firebase (Real-Time Data &amp; Auth)</span>
@@ -1340,7 +1400,7 @@
           <span class="skill-tag">Claude Code</span>
           <span class="skill-tag">Claude Skills / Agent Skills</span>
           <span class="skill-tag">Claude Connectors</span>
-          <span class="skill-tag">MCP Servers / MCP Integrations</span>
+          <span class="skill-tag">MCP (Model Context Protocol) Servers &amp; Integrations</span>
           <span class="skill-tag">AI Agent Orchestration</span>
           <span class="skill-tag">CLAUDE.md / Project Instructions</span>
         </div>

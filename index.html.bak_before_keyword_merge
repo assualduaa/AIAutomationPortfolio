@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asna Sherin E P — Forward Deployed AI Engineer | Full-Stack AI Developer</title>
+  <meta name="description" content="Forward Deployed AI Engineer and Full-Stack AI Developer delivering client-centric GenAI solutions — AI agents, MCP integrations, RAG, n8n automation, MongoDB, Oracle Cloud and AWS. Abu Dhabi, UAE." />
+  <style>
+    :root {
+      --orange: #FF6600;
+      --orange-light: #FF8833;
+      --orange-dark: #CC4400;
+      --orange-glow: rgba(255,102,0,0.3);
+      --orange-soft: rgba(255,102,0,0.1);
+      --bg: #1E1E1E;
+      --bg2: #252525;
+      --bg3: #2D2D2D;
+      --bg4: #363636;
+      --white: #FFFFFF;
+      --text: #E8E8E8;
+      --grey: #B8B8B8;
+      --grey-dim: #888888;
+      --border: rgba(255,102,0,0.22);
+      --border-dim: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--orange); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--orange-light); }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(30,30,30,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2.5rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 4px 30px rgba(255,102,0,0.12); }
+
+    .nav-brand { display: flex; align-items: center; gap: 0.65rem; }
+    .nav-logo-img {
+      width: 36px; height: 36px;
+      object-fit: cover;
+      object-position: center 10%;
+      border-radius: 50%;
+      border: 1.5px solid var(--orange);
+    }
+    .nav-logo-svg { width: 34px; height: 34px; }
+    .nav-name { font-size: 0.88rem; font-weight: 700; color: var(--white); letter-spacing: 0.04em; }
+    .nav-name span { color: var(--orange); }
+
+    nav ul { list-style: none; display: flex; gap: 1.6rem; }
+    nav ul a {
+      color: var(--grey);
+      font-size: 0.77rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav ul a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--orange);
+      transition: width 0.25s;
+    }
+    nav ul a:hover { color: var(--orange); }
+    nav ul a:hover::after { width: 100%; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 2rem 70px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 20% 50%, rgba(255,102,0,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(255,102,0,0.05) 0%, transparent 50%),
+                  var(--bg);
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,102,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,102,0,0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes gridMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(50px); }
+    }
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(90px); pointer-events: none;
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+    .orb-1 { width: 420px; height: 420px; background: rgba(255,102,0,0.07); top: -120px; left: -120px; animation-delay: 0s; }
+    .orb-2 { width: 320px; height: 320px; background: rgba(255,136,0,0.05); bottom: 0; right: -60px; animation-delay: 4s; }
+    @keyframes orbFloat {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(20px,-20px) scale(1.05); }
+    }
+
+    .hero-content { position: relative; z-index: 2; }
+
+    .hero-photo-wrap {
+      position: relative;
+      width: 140px; height: 140px;
+      margin: 0 auto 2rem;
+    }
+    .hero-photo-ring {
+      position: absolute; inset: -5px; border-radius: 50%;
+      background: conic-gradient(var(--orange), var(--orange-light), var(--orange-dark), var(--orange));
+      animation: spinRing 4s linear infinite;
+    }
+    @keyframes spinRing { to { transform: rotate(360deg); } }
+    .hero-photo-inner {
+      position: absolute; inset: 3px; border-radius: 50%;
+      background: var(--bg3); overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-photo-inner img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      border-radius: 50%;
+    }
+    .initials-fb {
+      display: none;
+      width: 100%; height: 100%;
+      align-items: center; justify-content: center;
+      font-size: 2.4rem; font-weight: 900; color: var(--orange);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--orange-soft);
+      border: 1px solid var(--border);
+      color: var(--orange-light);
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.32rem 1rem; border-radius: 20px;
+      margin-bottom: 1rem;
+      animation: fadeInDown 0.6s ease both;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-size: 3rem; font-weight: 900;
+      letter-spacing: -0.01em; line-height: 1.1;
+      margin-bottom: 0.55rem;
+      animation: fadeInUp 0.7s 0.1s ease both;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero-headline {
+      font-size: 1rem; color: var(--grey);
+      font-weight: 400; margin-bottom: 0.5rem;
+      animation: fadeInUp 0.7s 0.2s ease both;
+    }
+    .hero-headline strong { color: var(--orange-light); font-weight: 600; }
+    .hero-designation {
+      display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center;
+      gap: 0.2rem 0.85rem;
+      font-size: 1.55rem; font-weight: 800; letter-spacing: 0.005em; line-height: 1.25;
+      margin-bottom: 0.7rem;
+      animation: fadeInUp 0.7s 0.15s ease both;
+    }
+    .hero-designation .role {
+      background: linear-gradient(90deg, #FFFFFF 0%, #FFD2B0 55%, var(--orange-light) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: #fff;
+    }
+    .hero-designation .sep {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--orange); box-shadow: 0 0 10px var(--orange-glow), 0 0 0 4px var(--orange-soft);
+    }
+    .hero-value {
+      font-size: 1rem; color: var(--grey); max-width: 640px; line-height: 1.6;
+      margin: 0 auto 1.3rem;
+      animation: fadeInUp 0.7s 0.18s ease both;
+    }
+    .hero-value strong { color: var(--white); font-weight: 600; }
+    .hero-value .hl { color: var(--orange-light); font-weight: 600; }
+    .focus-strip {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      gap: 0.5rem; max-width: 820px; margin: 0 auto 1.6rem;
+      animation: fadeInUp 0.7s 0.22s ease both;
+    }
+    .focus-chip {
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+      padding: 0.38rem 0.95rem; border-radius: 999px;
+      color: var(--text); background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .focus-chip:hover { transform: translateY(-2px); border-color: var(--orange); box-shadow: 0 6px 18px rgba(255,102,0,0.18); }
+    .focus-chip.core {
+      color: #fff; border-color: transparent;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      box-shadow: 0 4px 16px var(--orange-glow);
+    }
+    .focus-divider { width: 1px; height: 18px; background: rgba(255,255,255,0.15); margin: 0 0.25rem; }
+    @media (max-width: 640px) {
+      .hero-designation { font-size: 1.2rem; flex-direction: column; }
+      .hero-designation .sep { width: 28px; height: 2px; border-radius: 2px; box-shadow: none; }
+      .focus-divider { display: none; }
+      .focus-chip { font-size: 0.76rem; padding: 0.32rem 0.8rem; }
+    }
+    .hero-location {
+      font-size: 0.85rem; color: var(--grey-dim);
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.7s 0.3s ease both;
+    }
+    .hero-links {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.65rem; margin-bottom: 2rem;
+      animation: fadeInUp 0.7s 0.4s ease both;
+    }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--grey); padding: 0.45rem 1.1rem;
+      border-radius: 8px; font-size: 0.82rem; font-weight: 500;
+      transition: all 0.25s;
+    }
+    .hero-links a:hover {
+      background: var(--orange-soft); border-color: var(--orange);
+      color: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--orange-glow);
+    }
+    .hero-badges {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.5rem; margin-bottom: 4.5rem;
+      animation: fadeInUp 0.7s 0.5s ease both;
+    }
+    .badge-row {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.5rem;
+    }
+    .badge {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--grey); font-size: 0.76rem; font-weight: 500;
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      transition: all 0.25s; cursor: default;
+    }
+    .badge:hover { border-color: var(--orange); color: var(--orange-light); background: var(--orange-soft); }
+    .badge.green {
+      background: rgba(5,150,105,0.12);
+      border-color: rgba(52,211,153,0.3); color: #6EE7B7;
+    }
+    .hero-scroll-hint {
+      position: absolute; bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+      animation: bounce 2s ease-in-out infinite; opacity: 0.45; z-index: 2;
+    }
+    .hero-scroll-hint span { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey-dim); }
+    .scroll-arrow { width: 18px; height: 18px; border-right: 2px solid var(--orange); border-bottom: 2px solid var(--orange); transform: rotate(45deg); }
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.75rem 0;
+    }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 2.5rem;
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.25rem;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 2.2rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: var(--grey-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 80px 0; }
+    section:nth-child(odd) { background: var(--bg); }
+    section:nth-child(even) { background: var(--bg2); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+
+    .section-title {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.78rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--orange); margin-bottom: 2.5rem;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+    }
+    .section-title .icon {
+      width: 28px; height: 28px;
+      background: var(--orange-soft); border: 1px solid var(--border);
+      border-radius: 6px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    /* ─── ABOUT ─── */
+    .summary-text {
+      font-size: 1.05rem; line-height: 1.85; color: var(--text);
+      border-left: 3px solid var(--orange); padding-left: 1.5rem;
+      max-width: 880px;
+    }
+
+    /* ─── SKILLS ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.35rem;
+    }
+    .skill-group {
+      background: var(--bg3); border: 1px solid var(--border-dim);
+      border-radius: 12px; padding: 1.35rem;
+      border-top: 2px solid var(--orange);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .skill-group:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px var(--orange-glow);
+      border-color: var(--border);
+    }
+    .skill-group h4 {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--orange); margin-bottom: 0.9rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .skill-tag {
+      background: rgba(255,255,255,0.06); color: var(--text);
+      font-size: 0.73rem; font-weight: 500;
+      padding: 0.22rem 0.6rem; border-radius: 5px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.2s; cursor: default;
+    }
+    .skill-tag:hover { background: var(--orange-soft); border-color: var(--orange); color: var(--orange-light); }
+
+    /* ─── EXPERIENCE ─── */
+    .exp-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .exp-list::before {
+      content: ''; position: absolute;
+      left: 16px; top: 24px; bottom: 0; width: 2px;
+      background: linear-gradient(180deg, var(--orange) 0%, rgba(255,102,0,0.08) 100%);
+    }
+    .exp-item { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
+    .exp-dot-wrap {
+      flex-shrink: 0; width: 34px;
+      display: flex; flex-direction: column; align-items: center; padding-top: 4px;
+    }
+    .exp-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--orange); border: 2px solid var(--bg3);
+      box-shadow: 0 0 0 3px var(--orange-glow);
+      flex-shrink: 0; z-index: 1; transition: all 0.3s;
+    }
+    .exp-item:hover .exp-dot { box-shadow: 0 0 0 6px var(--orange-glow); transform: scale(1.2); }
+    .exp-item.minor .exp-dot { background: var(--bg4); border-color: rgba(255,102,0,0.35); box-shadow: none; }
+    .exp-body {
+      flex: 1; background: var(--bg3);
+      border: 1px solid var(--border-dim); border-radius: 12px;
+      padding: 1.25rem 1.5rem; transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .exp-item:hover .exp-body { border-color: var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
+    .exp-item.minor .exp-body { background: rgba(255,255,255,0.025); border-color: rgba(255,255,255,0.05); }
+    .exp-header { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .exp-title { font-size: 1rem; font-weight: 700; color: var(--white); }
+    .exp-item.minor .exp-title { font-size: 0.9rem; color: var(--text); }
+    .exp-sep { color: var(--orange); font-weight: 300; }
+    .exp-company { font-size: 0.95rem; font-weight: 600; color: var(--orange); }
+    .exp-item.minor .exp-company { font-size: 0.88rem; color: var(--grey); }
+    .exp-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.76rem; color: var(--grey-dim); margin-bottom: 0.9rem; }
+    .exp-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .meta-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--orange); display: inline-block; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .exp-bullets li { font-size: 0.88rem; color: var(--grey); padding-left: 1.1rem; position: relative; line-height: 1.6; }
+    .exp-bullets li::before { content: '▸'; color: var(--orange); position: absolute; left: 0; font-size: 0.7rem; top: 4px; }
+
+    /* ─── PROJECTS ─── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.35rem;
+    }
+    .project-card {
+      background: var(--bg3); border: 1px solid var(--border-dim);
+      border-radius: 14px; padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .project-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--orange-light), transparent);
+      transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
+    }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(255,102,0,0.14);
+      border-color: var(--border);
+    }
+    .project-num {
+      font-size: 2.5rem; font-weight: 900;
+      color: rgba(255,102,0,0.1);
+      position: absolute; top: 0.5rem; right: 1rem;
+      line-height: 1; font-family: monospace;
+    }
+    .project-card h4 { font-size: 0.97rem; font-weight: 700; color: var(--white); line-height: 1.35; padding-right: 2.5rem; }
+    .project-card p { font-size: 0.83rem; color: var(--grey); line-height: 1.6; flex: 1; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .project-tag {
+      background: var(--orange-soft); color: var(--orange-light);
+      font-size: 0.7rem; font-weight: 600;
+      padding: 0.2rem 0.6rem; border-radius: 4px; border: 1px solid var(--border);
+    }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.8rem; font-weight: 600; color: var(--orange);
+      border-top: 1px solid var(--border-dim); padding-top: 0.7rem;
+      margin-top: auto; transition: gap 0.2s, color 0.2s;
+    }
+    .project-link:hover { gap: 0.55rem; color: var(--orange-light); }
+
+    /* ─── EDUCATION ─── */
+    .edu-lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 640px) { .edu-lang-grid { grid-template-columns: 1fr; } }
+
+    .sub-title {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--orange); margin-bottom: 1.1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .sub-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .edu-item .degree { font-size: 0.97rem; font-weight: 700; color: var(--white); }
+    .edu-item .school { font-size: 0.83rem; color: var(--grey); margin-top: 0.2rem; }
+    .lang-row { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.25rem; }
+    .lang-pill {
+      background: var(--bg3); border: 1px solid var(--border-dim);
+      border-radius: 20px; padding: 0.35rem 1rem;
+      font-size: 0.81rem; font-weight: 500; color: var(--text);
+      transition: all 0.2s;
+    }
+    .lang-pill:hover { border-color: var(--orange); color: var(--orange-light); background: var(--orange-soft); }
+    .lang-pill span { color: var(--grey-dim); font-size: 0.73rem; margin-left: 0.3rem; }
+
+    /* ─── CERTIFICATIONS ─── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .cert-card {
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--bg3); border: 1px solid var(--border-dim);
+      border-left: 3px solid var(--orange);
+      border-radius: 10px; padding: 1.1rem 1.25rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .cert-card:hover {
+      border-color: var(--orange);
+      transform: translateX(5px);
+      box-shadow: 0 4px 20px var(--orange-glow);
+    }
+    .cert-icon-wrap {
+      flex-shrink: 0; width: 38px; height: 38px;
+      background: var(--orange-soft); border: 1px solid var(--border);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .cert-card-body {}
+    .cert-name { font-size: 0.9rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 0.2rem; }
+    .cert-org { font-size: 0.77rem; color: var(--grey); }
+    .cert-date {
+      display: inline-block; margin-top: 0.4rem;
+      background: var(--orange-soft); border: 1px solid var(--border);
+      color: var(--orange-light); font-size: 0.7rem; font-weight: 600;
+      padding: 0.18rem 0.55rem; border-radius: 12px;
+    }
+    .cert-view-link {
+      display: block; margin-top: 0.45rem;
+      font-size: 0.72rem; font-weight: 600; color: var(--orange);
+    }
+    .cert-view-link:hover { color: var(--orange-light); text-decoration: underline; }
+
+    /* ─── CONTACT ─── */
+    .contact-section {
+      background: var(--bg2); padding: 80px 0;
+      position: relative; overflow: hidden;
+    }
+    .contact-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255,102,0,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.25rem; margin-top: 2rem;
+    }
+    .contact-item {
+      background: var(--bg3); border: 1px solid var(--border-dim);
+      border-radius: 10px; padding: 1.1rem 1.25rem;
+      transition: all 0.25s;
+    }
+    .contact-item:hover {
+      border-color: var(--border); transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255,102,0,0.1);
+    }
+    .contact-item .label {
+      font-size: 0.68rem; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--orange);
+      font-weight: 700; margin-bottom: 0.3rem;
+    }
+    .contact-item .value { font-size: 0.87rem; color: var(--text); }
+    .contact-item a { color: var(--text); }
+    .contact-item a:hover { color: var(--orange-light); }
+    .availability-bar {
+      margin-top: 2rem; background: var(--orange-soft);
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.9rem 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 1.75rem; align-items: center;
+    }
+    .avail-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.87rem; color: var(--text); }
+    .avail-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #10B981;
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.25);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 3px rgba(16,185,129,0.25); }
+      50% { box-shadow: 0 0 0 7px rgba(16,185,129,0.08); }
+    }
+
+    /* ─── RECOMMENDATIONS ─── */
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .rec-card {
+      background: var(--bg3);
+      border: 1px solid var(--border-dim);
+      border-radius: 14px;
+      padding: 1.75rem 1.75rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .rec-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--orange-light), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .rec-card:hover::before { transform: scaleX(1); }
+    .rec-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 36px rgba(255,102,0,0.12);
+      border-color: var(--border);
+    }
+    .rec-quote-icon {
+      font-size: 5rem;
+      line-height: 0.6;
+      color: var(--orange);
+      opacity: 0.18;
+      font-family: Georgia, serif;
+      font-weight: 900;
+      position: absolute;
+      top: 1rem; right: 1.25rem;
+      pointer-events: none;
+    }
+    .rec-text {
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.8;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+    .rec-author {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      border-top: 1px solid var(--border-dim);
+      padding-top: 1rem;
+    }
+    .rec-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--orange-soft);
+      border: 1.5px solid var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; font-weight: 800;
+      color: var(--orange); flex-shrink: 0;
+      letter-spacing: 0.04em;
+    }
+    .rec-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .rec-role {
+      font-size: 0.76rem;
+      color: var(--grey-dim);
+      margin-top: 0.1rem;
+    }
+
+    /* ─── CSM BADGE (fixed top-right) ─── */
+    .csm-badge-float {
+      position: fixed;
+      top: 66px;
+      right: 18px;
+      z-index: 999;
+      width: 80px;
+      height: 80px;
+      cursor: default;
+      filter: drop-shadow(0 4px 14px rgba(255,102,0,0.3));
+      transition: transform 0.3s, filter 0.3s;
+      animation: badgePop 0.6s 0.8s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    .csm-badge-float:hover {
+      transform: scale(1.1) rotate(-4deg);
+      filter: drop-shadow(0 6px 20px rgba(255,180,0,0.45));
+    }
+    @keyframes badgePop {
+      from { opacity: 0; transform: scale(0.4) rotate(20deg); }
+      to   { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* ─── PRODUCT CATALOGUE FLOAT (fixed, under the CSM badge) ─── */
+    .poster-float {
+      position: fixed; top: 156px; right: 18px; z-index: 999;
+      width: 80px; padding: 0; cursor: zoom-in; font: inherit;
+      background: #fff; border: 2px solid var(--orange); border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(255,102,0,0.35), 0 0 0 4px rgba(255,102,0,0.1);
+      transform: rotate(3deg);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: badgePop 0.6s 1.1s cubic-bezier(0.34,1.56,0.64,1) both, posterBob 3.5s 1.8s ease-in-out infinite;
+    }
+    .poster-float img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .poster-float-label {
+      position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%);
+      font-size: 0.64rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #fff; background: var(--orange); border-radius: 999px; padding: 0.15rem 0.6rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    }
+    .poster-float:hover, .poster-float:focus-visible {
+      transform: rotate(0deg) scale(1.12); animation-play-state: paused, paused;
+      box-shadow: 0 10px 28px rgba(255,102,0,0.55), 0 0 0 5px rgba(255,102,0,0.18);
+    }
+    .poster-float:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    @keyframes posterBob { 0%,100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+    @media (max-width: 700px) { .poster-float { display: none; } }
+    @media (prefers-reduced-motion: reduce) { .poster-float { animation: none; } }
+
+    /* ─── WHATSAPP BUTTON (fixed bottom-right) ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 22px;
+      z-index: 999;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.5);
+      transition: transform 0.25s, box-shadow 0.25s;
+      animation: waPop 0.5s 1s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    .wa-float:hover {
+      transform: scale(1.12);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.65);
+    }
+    @keyframes waPop {
+      from { opacity: 0; transform: scale(0); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+    .wa-pulse {
+      position: absolute;
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.35);
+      animation: waPulse 2.2s ease-out infinite;
+    }
+    @keyframes waPulse {
+      0%   { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #141414;
+      border-top: 1px solid rgba(255,102,0,0.12);
+      text-align: center; padding: 1.5rem 2rem;
+    }
+    .footer-logo-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.65rem; margin-bottom: 0.45rem;
+    }
+    .footer-logo { width: 28px; height: 28px; object-fit: contain; border-radius: 50%; }
+    .footer-logo-svg { width: 28px; height: 28px; }
+    footer p { color: var(--grey-dim); font-size: 0.78rem; }
+
+    /* ─── AI SOLUTIONS ─── */
+    .solutions-grid { grid-template-columns: repeat(3, 1fr); }
+    .solution-card .project-num { font-size: 2.2rem; }
+    .solution-status {
+      align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #4ade80; background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.28); border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+    }
+    .solution-status::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+    }
+    .solution-status.in-dev {
+      color: #fbbf24; background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.32);
+    }
+    .solution-status.in-dev::before { background: #fbbf24; }
+    .solution-ico { display: inline-block; margin-right: 0.25rem; }
+    @media (max-width: 1000px) { .solutions-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .solutions-grid { grid-template-columns: 1fr; } }
+
+    /* ─── HERO CTA: DELIVERED AI PRODUCTS (sits in .hero-links row) ─── */
+    .hero-links a.hero-cta {
+      gap: 0.55rem;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      border: 1px solid transparent;
+      color: #fff; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em;
+      padding: 0.45rem 1.15rem; border-radius: 8px;
+      box-shadow: 0 0 0 0 rgba(255,102,0,0.55);
+      animation: ctaPulse 2.4s ease-out infinite;
+    }
+    .hero-links a.hero-cta:hover {
+      color: #fff; transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--orange-light), var(--orange));
+      border-color: transparent; box-shadow: 0 8px 24px rgba(255,102,0,0.45);
+    }
+    .hero-links a.hero-cta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    .hero-cta-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+    .hero-cta-count { background: rgba(0,0,0,0.25); border-radius: 999px; font-size: 0.7rem; padding: 0.05rem 0.5rem; }
+    .hero-cta-arrow { display: inline-block; animation: ctaBounce 1.4s ease-in-out infinite; }
+    @keyframes ctaPulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,102,0,0.55); }
+      70% { box-shadow: 0 0 0 12px rgba(255,102,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,102,0,0); }
+    }
+    @keyframes ctaBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+    /* highlighted nav pill */
+    nav ul a.nav-highlight {
+      color: #fff; background: var(--orange-soft);
+      border: 1px solid var(--border); border-radius: 999px; padding: 0.25rem 0.8rem;
+    }
+    nav ul a.nav-highlight::after { display: none; }
+    nav ul a.nav-highlight:hover { background: var(--orange); color: #fff; }
+    /* glow when the section is reached */
+    #ai-solutions .section-title .icon { box-shadow: 0 0 14px var(--orange-glow); }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-links a.hero-cta, .hero-cta-arrow { animation: none; }
+    }
+
+    /* ─── AI SOLUTIONS: POSTER PREVIEW + LIGHTBOX ─── */
+    .sol-intro {
+      display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,0.8fr);
+      gap: 3rem; align-items: center; margin-bottom: 3rem;
+    }
+    .sol-intro-text .summary-text { margin-bottom: 1.5rem; }
+    .sol-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+    .sol-facts li {
+      font-size: 0.78rem; font-weight: 600; color: var(--grey);
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border-dim);
+      border-radius: 999px; padding: 0.3rem 0.85rem;
+    }
+    .sol-facts li strong { color: var(--orange-light); font-size: 0.9rem; margin-right: 0.15rem; }
+    .sol-open {
+      display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 700; color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      border: 0; border-radius: 10px; padding: 0.7rem 1.3rem;
+      box-shadow: 0 8px 24px rgba(255,102,0,0.3);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .sol-open:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,102,0,0.45); }
+
+    .sol-poster {
+      position: relative; justify-self: end; width: 100%; max-width: 330px;
+      background: none; border: 0; padding: 0; cursor: zoom-in; font: inherit; color: inherit;
+      perspective: 900px;
+    }
+    .sol-poster-stack, .sol-poster-stack::before {
+      position: absolute; inset: 0; border-radius: 18px;
+      background: var(--bg3); border: 1px solid var(--border);
+    }
+    .sol-poster-stack { transform: rotate(-5deg) translate(-12px, 6px); opacity: 0.7; transition: transform 0.4s; }
+    .sol-poster-stack::before { content: ''; transform: rotate(9deg) translate(26px, -2px); opacity: 0.6; }
+    .sol-poster-frame {
+      position: relative; display: block; overflow: hidden;
+      height: 400px; border-radius: 18px;
+      border: 1px solid var(--border); background: #fff;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 6px rgba(255,102,0,0.06), 0 0 60px rgba(255,102,0,0.18);
+      transform: rotate(2deg);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: posterFloat 6s ease-in-out infinite;
+    }
+    .sol-poster-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.6s ease; }
+    .sol-poster-fade {
+      position: absolute; inset: auto 0 0 0; height: 55%;
+      background: linear-gradient(to top, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.35) 55%, transparent 100%);
+    }
+    .sol-poster-cta {
+      position: absolute; left: 50%; bottom: 1.1rem; transform: translateX(-50%);
+      display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap;
+      font-size: 0.78rem; font-weight: 700; color: #fff;
+      background: rgba(255,102,0,0.92); border-radius: 999px; padding: 0.5rem 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+    .sol-poster-tag {
+      position: absolute; top: -0.7rem; left: 1rem; z-index: 2;
+      font-size: 0.66rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #fff; background: var(--orange); border-radius: 999px; padding: 0.25rem 0.75rem;
+      box-shadow: 0 4px 14px rgba(255,102,0,0.5);
+    }
+    .sol-poster:hover .sol-poster-frame, .sol-poster:focus-visible .sol-poster-frame {
+      transform: rotate(0deg) translateY(-6px) scale(1.02); animation-play-state: paused;
+      box-shadow: 0 28px 60px rgba(0,0,0,0.55), 0 0 0 6px rgba(255,102,0,0.12), 0 0 80px rgba(255,102,0,0.3);
+    }
+    .sol-poster:hover .sol-poster-frame img { transform: scale(1.05); }
+    .sol-poster:hover .sol-poster-stack { transform: rotate(-8deg) translate(-20px, 8px); }
+    .sol-poster:focus-visible, .sol-open:focus-visible { outline: 3px solid var(--orange-light); outline-offset: 6px; border-radius: 18px; }
+    @keyframes posterFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
+    .lightbox {
+      position: fixed; inset: 0; z-index: 3000; display: flex; flex-direction: column;
+      background: rgba(10,10,10,0.92); backdrop-filter: blur(8px);
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .lightbox[hidden] { display: none; }
+    .lightbox.open { opacity: 1; }
+    .lb-toolbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.7rem 1.25rem; border-bottom: 1px solid var(--border);
+      background: rgba(30,30,30,0.9);
+    }
+    .lb-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
+    .lb-actions { display: flex; align-items: center; gap: 0.4rem; }
+    .lb-btn {
+      min-width: 38px; height: 38px; padding: 0 0.8rem; cursor: pointer;
+      font: inherit; font-size: 1.15rem; font-weight: 700; color: var(--white);
+      background: rgba(255,255,255,0.07); border: 1px solid var(--border-dim); border-radius: 8px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .lb-btn:hover { background: var(--orange-soft); border-color: var(--border); }
+    .lb-btn:focus-visible { outline: 2px solid var(--orange-light); outline-offset: 2px; }
+    .lb-reset { font-size: 0.78rem; }
+    .lb-close { background: var(--orange); border-color: transparent; font-size: 1.4rem; }
+    .lb-close:hover { background: var(--orange-light); }
+    .lb-zoom { min-width: 3.2rem; text-align: center; font-size: 0.78rem; color: var(--grey); }
+    .lb-stage { flex: 1; display: flex; overflow: auto; padding: 1.25rem; cursor: zoom-in; -webkit-overflow-scrolling: touch; }
+    .lb-stage.zoomed { cursor: grab; }
+    .lb-stage.dragging { cursor: grabbing; user-select: none; }
+    .lb-stage img {
+      margin: auto; flex: none; display: block; border-radius: 10px; background: #fff;
+      height: calc(100vh - 150px); width: auto; max-width: none;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+    .lb-hint { text-align: center; font-size: 0.72rem; color: var(--grey-dim); padding: 0.5rem 1rem 0.8rem; }
+    body.lb-lock { overflow: hidden; }
+
+    @media (max-width: 860px) {
+      .sol-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sol-poster { justify-self: center; max-width: 300px; }
+      .sol-poster-frame { height: 360px; }
+    }
+    @media (max-width: 700px) {
+      .lb-title { display: none; }
+      .lb-toolbar { justify-content: flex-end; padding: 0.6rem 0.8rem; }
+      .lb-stage { padding: 0.75rem; }
+      .lb-stage img { height: calc(100vh - 130px); }
+      .lb-hint { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sol-poster-frame { animation: none; }
+      .sol-poster-frame, .sol-poster-frame img, .sol-poster-stack, .lightbox { transition: none; }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2rem; }
+      nav ul { display: none; }
+      .skills-grid, .projects-grid, .cert-grid { grid-template-columns: 1fr; }
+      .exp-list::before { left: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <!-- Logo from assets folder (save as assets/logo.png) -->
+    <img src="./assets/logo.png" class="nav-logo-img" alt="AS"
+         onerror="this.style.display='none'; document.getElementById('navLogoSVG').style.display='block';" />
+    <svg id="navLogoSVG" class="nav-logo-svg" style="display:none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#2D2D2D" stroke="#FF6600" stroke-width="3"/>
+      <g stroke="#FF6600" stroke-width="6" stroke-linecap="round">
+        <line x1="25" y1="25" x2="75" y2="75"/><line x1="75" y1="25" x2="25" y2="75"/>
+        <line x1="50" y1="18" x2="50" y2="82"/><line x1="18" y1="50" x2="82" y2="50"/>
+      </g>
+    </svg>
+    <span class="nav-name">Asna <span>Sherin</span></span>
+  </div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#ai-solutions" class="nav-highlight">AI Solutions</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#recommendations">Reviews</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero" id="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-content">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+      <div class="hero-photo-inner">
+        <img src="./assets/photo.png" alt="Asna Sherin E P"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="initials-fb">AS</div>
+      </div>
+    </div>
+
+    <div class="hero-tag">📍 Abu Dhabi, UAE &nbsp;·&nbsp; Available Now</div>
+    <h1>Asna <span>Sherin</span> E P</h1>
+    <div class="hero-designation">
+      <span class="role">Forward Deployed AI Engineer</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="role">Full-Stack AI Developer</span>
+    </div>
+    <p class="hero-value">Delivering <strong>client-centric AI solutions</strong> built around each business problem — from discovery to deployed <span class="hl">GenAI</span>, <span class="hl">AI agent</span> and <span class="hl">MCP</span>-powered systems.</p>
+    <div class="focus-strip" aria-label="Core expertise">
+      <span class="focus-chip core">GenAI</span>
+      <span class="focus-chip core">Agentic AI</span>
+      <span class="focus-chip core">MCP</span>
+      <span class="focus-divider" aria-hidden="true"></span>
+      <span class="focus-chip">RAG</span>
+      <span class="focus-chip">Claude Expert</span>
+      <span class="focus-chip">MongoDB</span>
+      <span class="focus-chip">Oracle Cloud</span>
+      <span class="focus-chip">AWS</span>
+    </div>
+
+    <div class="hero-links">
+      <a href="mailto:assumay@gmail.com">✉&nbsp; assumay@gmail.com</a>
+      <a href="tel:+971525804840">📞&nbsp; +971 52 580 4840</a>
+      <a href="https://www.linkedin.com/in/asnasherinep/" target="_blank">🔗&nbsp; LinkedIn</a>
+      <a href="https://github.com/assualduaa" target="_blank">⌥&nbsp; GitHub</a>
+      <a class="hero-cta" href="#ai-solutions">
+        <span class="hero-cta-dot" aria-hidden="true"></span>
+        Delivered AI Products
+        <span class="hero-cta-count">11</span>
+        <span class="hero-cta-arrow" aria-hidden="true">&darr;</span>
+      </a>
+    </div>
+
+    <div class="hero-badges">
+      <div class="badge-row">
+        <span class="badge">n8n Workflow Automation</span>
+        <span class="badge">AI Agents</span>
+        <span class="badge">LLM Integrations</span>
+        <span class="badge">Prompt &amp; Context Engineering</span>
+        <span class="badge">API Automation</span>
+        <span class="badge">Python · JavaScript</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">Power BI &amp; DAX</span>
+        <span class="badge">Bitrix24 CRM</span>
+        <span class="badge">Real Estate Analytics</span>
+        <span class="badge green">✔ Immediate Joiner</span>
+        <span class="badge green">UAE Residency (Transferable)</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><div class="stat-num" data-count="10">0</div><div class="stat-label">Years in Technology &amp; Digital</div></div>
+    <div class="stat-item reveal delay-1"><div class="stat-num" data-count="40" data-suffix="%">0</div><div class="stat-label">Manual Processing Reduction</div></div>
+    <div class="stat-item reveal delay-2"><div class="stat-num" data-count="50" data-suffix="%">0</div><div class="stat-label">Lead Sourcing Time Reduction</div></div>
+    <div class="stat-item reveal delay-3"><div class="stat-num" data-count="15">0</div><div class="stat-label">Digital &amp; AI Solutions Delivered</div></div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">👤</span> Professional Summary</div>
+    <p class="summary-text reveal delay-1">
+      Forward Deployed AI Engineer and Full-Stack AI Developer, Claude Expert, and Certified Scrum Master with 10+ years of experience across AI automation, Generative AI, data analytics, IT, CRM, and digital operations. I work directly with clients to understand the business problem first, then design and deliver client-centric GenAI solutions — AI-powered workflows, LLM pipelines, RAG solutions, AI agents, MCP integrations, and API integrations that reduce manual effort and improve operational efficiency. My expertise combines Claude, n8n, GenAI, MCP, Python, MongoDB, Oracle Cloud, AWS, CRM automation, Power BI, DAX, SQL, and ETL, enabling me to connect intelligent automation with data-driven business decisions. I have delivered AI automation and CRM analytics solutions within UAE-based business and government contexts, including project-based work as an AI Automation Specialist at Innovyx Technology Solutions and AI/CRM analytics work at EGC Properties, Abu Dhabi.
+    </p>
+  </div>
+</section>
+
+<!-- ── AI PROJECTS &amp; INTELLIGENT SOLUTIONS ── -->
+<section id="ai-solutions">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🧠</span> Delivered AI Products &amp; Intelligent Solutions</div>
+    <div class="sol-intro">
+      <div class="sol-intro-text">
+        <p class="summary-text reveal delay-1">
+          AI applications, intelligent automation systems, and data-driven solutions designed to streamline business operations, reduce manual effort, and improve decision-making.
+        </p>
+        <ul class="sol-facts reveal delay-2" aria-label="Catalogue highlights">
+          <li><strong>11</strong> AI products</li>
+          <li>AI · Automation · Agents</li>
+          <li>Data · Web</li>
+        </ul>
+        <button type="button" class="sol-open reveal delay-3" data-lightbox-open>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+          View the product catalogue
+        </button>
+      </div>
+
+      <button type="button" class="sol-poster reveal delay-2" data-lightbox-open
+              aria-haspopup="dialog" aria-controls="posterLightbox"
+              aria-label="Open the AI products catalogue poster in full size">
+        <span class="sol-poster-stack" aria-hidden="true"></span>
+        <span class="sol-poster-frame">
+          <img src="./assets/ai-products-ready-poster-thumb.webp" width="560" height="840" loading="lazy" decoding="async"
+               alt="Poster listing 11 AI products: RAG bot, document processing, resource optimization, n8n assistants, Power BI dashboards and more." />
+          <span class="sol-poster-fade" aria-hidden="true"></span>
+          <span class="sol-poster-cta" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            Tap to view full poster
+          </span>
+        </span>
+        <span class="sol-poster-tag" aria-hidden="true">Product Catalogue</span>
+      </button>
+    </div>
+
+    <div class="projects-grid solutions-grid">
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">01</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔎</span> RAG-Based AI Bot</h4>
+        <p>An AI-powered document intelligence application that uses Retrieval-Augmented Generation (RAG), vector search, and LLMs to answer questions from uploaded documents with source citations.</p>
+        <div class="project-tags"><span class="project-tag">RAG</span><span class="project-tag">Vector Search</span><span class="project-tag">LLM</span><span class="project-tag">Source Citations</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank" rel="noopener">↗ github.com/assualduaa/AIFileIntelligenceBot</a>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">02</span>
+        <span class="solution-status in-dev">Under Development</span>
+        <h4><span class="solution-ico" aria-hidden="true">🗓️</span> Resource Optimization Platform</h4>
+        <p>A resource planning application that supports project assignments, workforce availability tracking, capacity planning, and resource utilization.</p>
+        <div class="project-tags"><span class="project-tag">Resource Planning</span><span class="project-tag">Capacity Planning</span><span class="project-tag">Utilization</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/ResourceOptimization" target="_blank" rel="noopener">↗ github.com/assualduaa/ResourceOptimization</a>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">03</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📄</span> Intelligent Document Processing &amp; Classification</h4>
+        <p>An AI-powered document processing solution for OCR, document classification, information extraction, and conversion of unstructured documents into structured data.</p>
+        <div class="project-tags"><span class="project-tag">OCR</span><span class="project-tag">Classification</span><span class="project-tag">Data Extraction</span><span class="project-tag">Structured Data</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIBasedDocumentProcessor" target="_blank" rel="noopener">↗ github.com/assualduaa/AIBasedDocumentProcessor</a>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">04</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📇</span> E-Visiting Card Application</h4>
+        <p>A digital business card application that enables professionals to share contact details through a mobile-friendly interface and QR codes.</p>
+        <div class="project-tags"><span class="project-tag">Digital Card</span><span class="project-tag">QR Code</span><span class="project-tag">Mobile-Friendly</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/SmartE-VisitngCard-QRBased" target="_blank" rel="noopener">↗ github.com/assualduaa/SmartE-VisitngCard-QRBased</a>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">05</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">💬</span> n8n Business AI Assistant</h4>
+        <p>An AI-powered business assistant integrating n8n, Gemini, and MySQL to answer business questions using live database data and validated SQL queries.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Gemini</span><span class="project-tag">MySQL</span><span class="project-tag">SQL Validation</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/n8nBusinessAssistant" target="_blank" rel="noopener">↗ github.com/assualduaa/n8nBusinessAssistant</a>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">06</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧲</span> n8n Lead Data Extraction Agent</h4>
+        <p>An AI automation workflow that extracts and structures lead information, reducing repetitive manual data-processing tasks.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span><span class="project-tag">Lead Data</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent" target="_blank" rel="noopener">↗ github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent</a>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">07</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🔬</span> Research Assistant</h4>
+        <p>An AI-powered research tool that finds, analyzes, and summarizes information to accelerate research and simplify information gathering.</p>
+        <div class="project-tags"><span class="project-tag">Research</span><span class="project-tag">Summarization</span><span class="project-tag">AI</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-4">
+        <span class="project-num">08</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📈</span> AI-Powered Market Analysis</h4>
+        <p>An AI-powered market research solution designed to analyze market information, identify trends, explore opportunities, and support business decisions.</p>
+        <div class="project-tags"><span class="project-tag">Market Research</span><span class="project-tag">Trend Analysis</span><span class="project-tag">AI</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AI-basedLeadGenerationSystem" target="_blank" rel="noopener">↗ github.com/assualduaa/AI-basedLeadGenerationSystem</a>
+      </div>
+      <div class="project-card solution-card reveal delay-1">
+        <span class="project-num">09</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">🧭</span> Job Search Assistant</h4>
+        <p>An AI-powered career assistant that helps users discover relevant job opportunities through intelligent search and personalized recommendations.</p>
+        <div class="project-tags"><span class="project-tag">AI Assistant</span><span class="project-tag">Job Search</span><span class="project-tag">Recommendations</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-2">
+        <span class="project-num">10</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📝</span> Resume Writing Assistant</h4>
+        <p>An AI-powered resume improvement tool that enhances professional formatting, optimizes relevant keywords, and supports ATS-friendly resumes.</p>
+        <div class="project-tags"><span class="project-tag">Resume</span><span class="project-tag">ATS-Friendly</span><span class="project-tag">Keyword Optimization</span></div>
+      </div>
+      <div class="project-card solution-card reveal delay-3">
+        <span class="project-num">11</span>
+        <span class="solution-status">Delivered</span>
+        <h4><span class="solution-ico" aria-hidden="true">📊</span> Power BI Dashboards</h4>
+        <p>Interactive Power BI dashboards that visualize business KPIs, analyze operational data, and provide actionable insights for informed decision-making.</p>
+        <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">KPIs</span><span class="project-tag">Dashboards</span></div>
+        <a class="project-link" href="https://github.com/assualduaa" target="_blank" rel="noopener">↗ github.com/assualduaa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">⚡</span> Core Skills</div>
+    <p class="summary-text reveal delay-1" style="margin-bottom: 2.5rem;">
+      A highly experienced AI Automation Expert serving the UAE market, with 10+ years of experience spanning enterprise IT, data analytics, and business operations. I specialize in Claude-powered AI agents, n8n workflow automation, prompt &amp; context engineering, and end-to-end LLM integrations — delivering production-ready automation for UAE businesses and government-linked organizations.
+    </p>
+    <div class="skills-grid">
+
+      <div class="skill-group reveal delay-1">
+        <h4>🤖 Large Language Models (LLMs)</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Claude Expert (Anthropic APIs)</span>
+          <span class="skill-tag">Generative AI (GenAI)</span>
+          <span class="skill-tag">OpenAI (GPT models)</span><span class="skill-tag">Azure OpenAI</span>
+          <span class="skill-tag">Mistral</span><span class="skill-tag">Ollama (Local LLM Deployment)</span>
+          <span class="skill-tag">Prompt &amp; Context Engineering</span>
+          <span class="skill-tag">Function Calling / Tool-Use Patterns</span>
+          <span class="skill-tag">AI Agent Design</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-2">
+        <h4>🔄 AI Automation &amp; Orchestration <span style="color:var(--grey-dim); font-weight:500; text-transform:none; letter-spacing:0;">(Core Strength)</span></h4>
+        <div class="skill-tags">
+          <span class="skill-tag">n8n Workflow Automation (Advanced)</span>
+          <span class="skill-tag">Multi-Step AI Workflows</span>
+          <span class="skill-tag">Event-Driven Automation</span>
+          <span class="skill-tag">Webhook-Based AI Pipelines</span>
+          <span class="skill-tag">API Orchestration with AI Decision Nodes</span>
+          <span class="skill-tag">Conditional Logic Automation Flows</span>
+          <span class="skill-tag">Error Handling &amp; Retry Strategies</span>
+          <span class="skill-tag">LLM Orchestration</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-3">
+        <h4>🧩 Agentic AI &amp; Systems Design</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Agentic AI</span>
+          <span class="skill-tag">AI-Powered Task Automation Agents</span>
+          <span class="skill-tag">Lead Extraction &amp; Processing Agents</span>
+          <span class="skill-tag">Document Intelligence Workflows</span>
+          <span class="skill-tag">Email Classification &amp; Auto-Response Agents</span>
+          <span class="skill-tag">RAG-Based Knowledge Workflows</span>
+          <span class="skill-tag">Multi-Step Autonomous Workflow Design</span>
+          <span class="skill-tag">Multi-Agent Systems</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-4">
+        <h4>🔌 AI + API Integration</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">REST API Integration with AI Workflows</span>
+          <span class="skill-tag">JSON-Based Data Transformation</span>
+          <span class="skill-tag">Structured / JSON-Schema LLM Outputs</span>
+          <span class="skill-tag">OAuth-Based API Authentication</span>
+          <span class="skill-tag">SaaS Integrations (CRM, Email, Forms)</span>
+          <span class="skill-tag">Webhook-Triggered AI Processing</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-1">
+        <h4>🧾 AI Data Processing</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">OCR-Based Data Extraction (AI-Assisted)</span>
+          <span class="skill-tag">Unstructured → Structured Data Conversion</span>
+          <span class="skill-tag">AI-Assisted Data Cleaning</span>
+          <span class="skill-tag">Automated Lead Enrichment</span>
+          <span class="skill-tag">AI-Based Document Parsing</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-2">
+        <h4>🧪 AI Tools &amp; Framework Ecosystem</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">n8n (Primary Automation Engine)</span>
+          <span class="skill-tag">OpenAI API Ecosystem</span>
+          <span class="skill-tag">LangChain / LangGraph</span>
+          <span class="skill-tag">FAISS (Vector Search)</span>
+          <span class="skill-tag">Postman (API Testing)</span>
+          <span class="skill-tag">Firebase (Backend Integration)</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-3">
+        <h4>🧑‍💻 Supporting Technical Skills</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript (n8n Function Nodes)</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">MySQL / PostgreSQL</span>
+          <span class="skill-tag">Oracle Cloud (OCI)</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Window Functions &amp; Query Tuning</span>
+          <span class="skill-tag">Stored Procedures &amp; Views</span>
+          <span class="skill-tag">Firebase (Real-Time Data &amp; Auth)</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-4">
+        <h4>📊 AI + Analytics Integration</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">AI-Driven KPI Reporting Automation</span>
+          <span class="skill-tag">Power BI + Automated Data Pipelines</span>
+          <span class="skill-tag">SQL-Based Data Extraction for AI Workflows</span>
+          <span class="skill-tag">Automated Dashboard Refresh Pipelines</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-1">
+        <h4>📈 Data &amp; BI Analytics</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Power BI &amp; DAX</span>
+          <span class="skill-tag">Advanced Excel (Power Query, Power Pivot)</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">SQL (T-SQL / MySQL / PostgreSQL)</span>
+          <span class="skill-tag">ETL, Data Modelling &amp; Transformation</span>
+          <span class="skill-tag">Dashboard Development &amp; KPI Reporting</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-1">
+        <h4>⚙️ Automation Engineering <span style="color:var(--grey-dim); font-weight:500; text-transform:none; letter-spacing:0;">(AI Context)</span></h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Workflow Architecture Design</span>
+          <span class="skill-tag">System Integration Planning</span>
+          <span class="skill-tag">Scalable Automation Design Patterns</span>
+          <span class="skill-tag">Business Process Automation Mapping</span>
+          <span class="skill-tag">End-to-End AI Pipeline Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-2">
+        <h4>Real Estate Analytics</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Property Finder &amp; Bayut Integration</span>
+          <span class="skill-tag">Campaign Attribution</span><span class="skill-tag">Sales Funnel Optimization</span>
+          <span class="skill-tag">Agent KPIs</span><span class="skill-tag">Real-Time Reporting</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-3">
+        <h4>Project &amp; Agile</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Agile / Scrum (CSM)</span><span class="skill-tag">Jira</span>
+          <span class="skill-tag">Asana</span><span class="skill-tag">Requirements Gathering</span>
+          <span class="skill-tag">Stakeholder Management</span><span class="skill-tag">Cross-Functional Leadership</span>
+          <span class="skill-tag">UAT</span><span class="skill-tag">Documentation</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-4">
+        <h4>Web Analytics &amp; MarTech</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Google Analytics (GA4)</span>
+          <span class="skill-tag">Google Tag Manager (GTM)</span>
+          <span class="skill-tag">Conversion Tracking</span>
+          <span class="skill-tag">Custom Dimensions &amp; Events</span>
+          <span class="skill-tag">Campaign Attribution</span>
+          <span class="skill-tag">Email Marketing Analytics</span>
+          <span class="skill-tag">SEO Analytics</span>
+          <span class="skill-tag">Google Webmaster Tools</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-1">
+        <h4>Web Development</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5 / CSS3</span>
+          <span class="skill-tag">Email-Client-Safe HTML Emails</span>
+          <span class="skill-tag">Interactive Web Forms</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">jQuery / AJAX</span>
+          <span class="skill-tag">CodeIgniter</span>
+          <span class="skill-tag">AWS (Deployment)</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal delay-2">
+        <h4>🧠 Claude Ecosystem</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Claude Skills / Agent Skills</span>
+          <span class="skill-tag">Claude Connectors</span>
+          <span class="skill-tag">MCP (Model Context Protocol) Servers &amp; Integrations</span>
+          <span class="skill-tag">AI Agent Orchestration</span>
+          <span class="skill-tag">CLAUDE.md / Project Instructions</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">💼</span> Professional Experience</div>
+
+    <div class="reveal" style="background: var(--bg3); border: 1px solid var(--border); border-left: 3px solid #10B981; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2.25rem; display:flex; flex-wrap:wrap; align-items:center; gap:1rem; justify-content:space-between;">
+      <div style="display:flex; align-items:flex-start; gap:0.9rem;">
+        <span style="width:10px;height:10px;margin-top:6px;border-radius:50%;background:#10B981;box-shadow:0 0 0 3px rgba(16,185,129,0.25);animation:pulse 2s ease-in-out infinite;flex-shrink:0;"></span>
+        <div>
+          <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#6EE7B7; margin-bottom:0.3rem;">Currently Working</div>
+          <div style="font-size:0.98rem; font-weight:700; color:var(--white);">AI Automation Engineer <span style="color:var(--grey-dim); font-weight:500;">— Contract-Based</span> <span class="exp-sep">—</span> <span class="exp-company">Innovyx Technology Solutions</span></div>
+          <div class="exp-meta" style="margin-top:0.35rem;"><span><span class="meta-dot"></span>Abu Dhabi, UAE</span><span><span class="meta-dot"></span>May 2026 – Present</span><span style="color:#6EE7B7; font-weight:600;"><span class="meta-dot"></span>11+ AI solutions delivered</span></div>
+          <div style="font-size:0.83rem; color:var(--grey); margin-top:0.4rem; max-width:640px; line-height:1.6;">Delivered <strong style="color:var(--text);">more than 11 AI solutions</strong> spanning AI agents, RAG systems, n8n, data and workflow automation. Now building the <strong style="color:var(--text);">Resource Optimization Platform</strong> — workforce planning and resource allocation with availability tracking, capacity planning, and utilization insights. Recently delivered the <strong style="color:var(--text);">AI Intelligence Bot (RAG-based Agentic Workflow System)</strong>, a Python-based agentic AI system using the Mistral API, LangChain, and FAISS.</div>
+        </div>
+      </div>
+      <a href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank" style="flex-shrink:0; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.83rem; font-weight:600; color:var(--orange); border:1px solid var(--border); padding:0.5rem 1rem; border-radius:8px;">↗ View Project</a>
+    </div>
+
+    <div class="exp-list">
+
+      <div class="exp-item reveal">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">Data Analyst &amp; CRM Automation</span><span class="exp-sep">—</span><span class="exp-company">EGC Properties</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Abu Dhabi, UAE</span><span><span class="meta-dot"></span>Feb 2026 – Apr 2026</span></div>
+          <ul class="exp-bullets">
+            <li>Engineered scalable Python and n8n automation agents to automate data ingestion pipelines from regional real estate portals (Property Finder, Bayut), reducing manual collection hours by 35% and saving 10+ hours per week.</li>
+            <li>Authored DAX, SQL, and MySQL queries for data profiling, cleaning, and validation of 50,000+ real estate transactions.</li>
+            <li>Developed interactive Power BI dashboards integrated with Bitrix24 CRM data to track property sales trends, improving executive reporting delivery timelines by 18%.</li>
+            <li>Enforced end-to-end data health audits across the Bitrix24 platform, maximizing pipeline conversion visibility by 14%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal delay-1">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">AI Automation &amp; Data Analyst <span style="color:var(--grey-dim); font-weight:500;">— Contract</span></span><span class="exp-sep">—</span><span class="exp-company">Innovyx Technology Solutions</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Abu Dhabi, UAE (Hybrid)</span><span><span class="meta-dot"></span>Oct 2025 – Feb 2026</span><span><span class="meta-dot"></span>Project-based</span></div>
+          <ul class="exp-bullets">
+            <li>Architected real-time financial BI dashboards and multidimensional data aggregation layers using Power BI and Tableau, improving executive decision visibility by 25%.</li>
+            <li>Implemented an AI-powered intelligent document processing system for an Abu Dhabi government entity, reducing manual data extraction effort by 40%.</li>
+            <li>Built n8n and Google Sheets automation workflows for lead extraction and structured pipeline creation, reducing operational workload by 50%.</li>
+            <li>Standardized 10,000+ healthcare records across ERPNext; documented reporting workflows and data transformation logic to support BI developers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal delay-2">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">Data Analyst</span><span class="exp-sep">—</span><span class="exp-company">RP2 Pvt Ltd</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Calicut, India (Remote)</span><span><span class="meta-dot"></span>Sep 2025 – Jan 2026</span></div>
+          <ul class="exp-bullets">
+            <li>Designed and optimized 8+ interactive Power BI, Tableau, and Excel dashboards delivering KPI-driven insights and improving reporting efficiency by 50%.</li>
+            <li>Applied SQL, Python, and DAX for data extraction, EDA, data modeling, and structured dataset preparation. Projects: Loan Portfolio Financial Analysis, Data Professional Survey Breakdown, Global Happiness Report.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal delay-3">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">IT &amp; Data Team Lead</span><span class="exp-sep">—</span><span class="exp-company">Deft Innovations</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Calicut, India</span><span><span class="meta-dot"></span>Aug 2023 – May 2025</span></div>
+          <ul class="exp-bullets">
+            <li>Led a cross-functional team of 15+ across IT, Analytics, and Business — managing 5+ concurrent projects and delivering 15+ digital solutions within 12 months.</li>
+            <li>Gathered and documented business requirements from clients; produced specifications and handover documents for technical teams.</li>
+            <li>Delivered 30+ client digital campaigns, achieving up to 35% ROI improvement through structured analytics frameworks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item minor reveal">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">Web Developer &amp; Digital Marketer</span><span class="exp-sep">—</span><span class="exp-company">Yospace International, UAE</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Nov 2019 – Aug 2021</span></div>
+          <ul class="exp-bullets">
+            <li>Implemented GA4 and Google Tag Manager across client websites; executed 50+ email marketing campaigns and built 5+ client websites using HTML5, CSS3, JavaScript, and PHP.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item minor reveal">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">Developer &amp; Application Support</span><span class="exp-sep">—</span><span class="exp-company">MYJASH Solutions FZCO, Dubai Silicon Oasis</span></div>
+          <div class="exp-meta"><span><span class="meta-dot"></span>Mar 2017 – Nov 2019</span></div>
+          <ul class="exp-bullets">
+            <li>Built and supported web applications using JavaScript (jQuery, AJAX), PHP, MySQL, and CodeIgniter; handled AWS deployments and integrated Google Analytics tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item minor reveal">
+        <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-title">Earlier Roles <span style="font-size:0.78rem;color:var(--grey-dim);font-weight:400;">2013 – 2017</span></span></div>
+          <ul class="exp-bullets">
+            <li><strong style="color:var(--text);">Web Developer — Softroniics, Calicut (Jan 2015 – Jan 2017):</strong> Developed academic IT projects including Information Retrieval System and Online Banking using HTML, CSS, JavaScript, and PHP.</li>
+            <li><strong style="color:var(--text);">SEO Analyst — Cenveo, Calicut (Jun 2013 – Nov 2014):</strong> Delivered SEO analytics and performance reporting for international clients using Google Analytics and Google Webmaster Tools.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🚀</span> Key Projects</div>
+    <div class="projects-grid">
+      <div class="project-card reveal delay-1">
+        <span class="project-num">01</span>
+        <h4>AI-based Document Processor</h4>
+        <p>End-to-end LLM pipeline for automated PDF ingestion, intelligent text extraction, document classification, and structured data output — built for an Abu Dhabi government entity using LLM orchestration and prompt engineering. Turns unstructured PDFs into clean, structured records ready for review and downstream systems, cutting manual document handling.</p>
+        <div class="project-tags"><span class="project-tag">LLM Pipeline</span><span class="project-tag">Python</span><span class="project-tag">n8n</span><span class="project-tag">AI Automation</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIBasedDocumentProcessor" target="_blank">↗ github.com/assualduaa/AIBasedDocumentProcessor</a>
+      </div>
+
+      <div class="project-card reveal delay-2" style="border-top:2px solid var(--orange);">
+        <span class="project-num">02</span>
+        <h4>n8n Business Assistant</h4>
+        <p>A chat-based AI agent built in n8n that lets business owners ask plain-English questions — "Which staff member generated the highest sales?" — and get real, data-backed answers. The agent translates questions into read-only SQL, queries a live MySQL database, and explains results in plain language, with conversational memory for follow-ups like "what about last month?". Fully Dockerized (n8n + MySQL) and schema-driven, so it adapts to any service or retail business.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">AI Agent</span><span class="project-tag">Gemini LLM</span><span class="project-tag">MySQL</span><span class="project-tag">Conversational Memory</span><span class="project-tag">Docker</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/n8nBusinessAssistant" target="_blank">↗ github.com/assualduaa/n8nBusinessAssistant</a>
+      </div>
+
+      <div class="project-card reveal delay-3" style="border-top:2px solid var(--orange);">
+        <span class="project-num">03</span>
+        <h4>🔵 RAG-based Intelligence Bot <span style="font-weight:500; color:var(--grey);">(Agentic Workflow System)</span></h4>
+        <p>An agentic AI automation system in Python that orchestrates autonomous, multi-step task workflows using the Mistral API, LangChain, and a FAISS vector store. Combines RAG-based semantic search with LLM-driven decision-making for context-aware, memory-enabled automation. Delivers answers grounded in uploaded documents, so teams find information faster without manual searching. <em style="color:var(--orange-light); font-style:normal;">Deployed.</em></p>
+        <div class="project-tags"><span class="project-tag">Agentic AI</span><span class="project-tag">Python</span><span class="project-tag">Mistral API</span><span class="project-tag">LangChain</span><span class="project-tag">FAISS</span><span class="project-tag">RAG</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AIFileIntelligenceBot" target="_blank">↗ github.com/assualduaa/AIFileIntelligenceBot</a>
+      </div>
+
+      <div class="project-card reveal delay-4" style="border-top:2px solid var(--orange); box-shadow:0 8px 30px rgba(255,102,0,0.1);">
+        <span class="project-num">04</span>
+        <h4>★ AI-Powered Lead Data Extraction Agent</h4>
+        <p>A 7-node n8n agent that triggers on demand or on a schedule, pulls live lead data from Google APIs, transforms and cleans the raw JSON with custom JavaScript logic, then auto-generates a structured Google Sheet — ready for BI dashboards or CRM ingestion. Eliminates hours of manual data collection and copy-paste errors every week.</p>
+        <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Google APIs</span><span class="project-tag">JavaScript</span><span class="project-tag">Automation</span><span class="project-tag">Lead Generation</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent" target="_blank">↗ github.com/assualduaa/AI-Powered-Lead-Data-Extraction-Agent</a>
+      </div>
+
+      <div class="project-card reveal delay-1">
+        <span class="project-num">05</span>
+        <h4>EGC Properties CRM &amp; Sales Analytics Dashboard</h4>
+        <p>Power BI dashboards integrated with Bitrix24 CRM and real estate portal data to track property sales trends, agent KPIs, and pipeline conversion — with RLS, scheduled refresh, and advanced DAX measures. Gives sales leaders one live view of agent performance and pipeline health in place of manual reporting.</p>
+        <div class="project-tags"><span class="project-tag">Bitrix24</span><span class="project-tag">Power BI</span><span class="project-tag">DAX</span><span class="project-tag">RLS</span><span class="project-tag">Real Estate</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/EGC" target="_blank">↗ github.com/assualduaa/EGC</a>
+      </div>
+
+      <div class="project-card reveal delay-2">
+        <span class="project-num">06</span>
+        <h4>Financial Data Analysis — Loan Portfolio &amp; Profit Forecasting</h4>
+        <p>SQL and Power BI analysis of a loan portfolio dataset covering risk segmentation, profit forecasting, and KPI dashboarding for financial decision support. Helps spot high-risk segments early and compare projected profitability across the portfolio.</p>
+        <div class="project-tags"><span class="project-tag">SQL</span><span class="project-tag">Power BI</span><span class="project-tag">Financial Analytics</span><span class="project-tag">DAX</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/LoanPortfolioFinancialAnalysis" target="_blank">↗ github.com/assualduaa/LoanPortfolioFinancialAnalysis</a>
+      </div>
+
+      <div class="project-card reveal delay-3">
+        <span class="project-num">07</span>
+        <h4>Market Intelligence &amp; Data Visualization</h4>
+        <p>AI-assisted market research workflow automating data collection and KPI tracking from UAE economic datasets, with Power BI visualization for strategic insights.</p>
+        <div class="project-tags"><span class="project-tag">AI-Assisted</span><span class="project-tag">Power BI</span><span class="project-tag">UAE Data</span><span class="project-tag">Market Research</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/Market-Data-Visualization-Project" target="_blank">↗ github.com/assualduaa/Market-Data-Visualization-Project</a>
+      </div>
+
+      <div class="project-card reveal delay-4">
+        <span class="project-num">08</span>
+        <h4>Inventory &amp; Supply-Chain KPI Analysis</h4>
+        <p>MySQL and Power BI project analyzing inventory levels, supply-chain performance, and operational KPIs to support data-driven stock management decisions. Surfaces slow-moving stock and supply bottlenecks so teams can plan reorders with confidence.</p>
+        <div class="project-tags"><span class="project-tag">MySQL</span><span class="project-tag">Power BI</span><span class="project-tag">Supply Chain</span><span class="project-tag">KPI</span></div>
+        <a class="project-link" href="https://github.com/assualduaa/MintClassicSQL" target="_blank">↗ github.com/assualduaa/MintClassicSQL</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── RECOMMENDATIONS ── -->
+<section id="recommendations">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">💬</span> Recommendations</div>
+    <div class="rec-grid">
+
+      <div class="rec-card reveal delay-1">
+        <div class="rec-quote-icon">"</div>
+        <p class="rec-text">She was an exceptional team member whose contributions were instrumental throughout the Innovyx initiative. Her consistent dedication, proactive ownership, and reliable support significantly strengthened the project's execution at every stage. She demonstrated strong commitment, collaborated effectively across the team, and consistently went beyond expectations to ensure successful outcomes. I sincerely appreciate her efforts and the value she brought to the entire journey.</p>
+        <div class="rec-author">
+          <div class="rec-avatar">MA</div>
+          <div>
+            <div class="rec-name">Muhammed Ashraph</div>
+            <div class="rec-role">CEO, Innovyx Technology Solutions &nbsp;·&nbsp; Abu Dhabi, UAE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card reveal delay-2">
+        <div class="rec-quote-icon">"</div>
+        <p class="rec-text">She is a dedicated and hardworking individual who played a key role in supporting Deft Solutions in its emergence as a new brand. Her commitment and contributions have been an integral part of the foundation, and she truly stood as a pillar in our growth journey.</p>
+        <div class="rec-author">
+          <div class="rec-avatar">AA</div>
+          <div>
+            <div class="rec-name">Ajmal Ali</div>
+            <div class="rec-role">CEO, Deft Innovations &nbsp;·&nbsp; Calicut, India</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS (own section) ── -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🏅</span> Certifications</div>
+    <div class="cert-grid">
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">🧩</div>
+        <div class="cert-card-body">
+          <div class="cert-name">n8n Certification Course (Level 1)</div>
+          <div class="cert-org">n8n</div>
+          <span class="cert-date">In Progress</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">🤖</div>
+        <div class="cert-card-body">
+          <div class="cert-name">AI Agent Development (OpenAI, LangGraph &amp; MCP)</div>
+          <div class="cert-org">TechnoMaster</div>
+          <span class="cert-date">In Progress</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-3">
+        <div class="cert-icon-wrap">🤖</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Claude 101 Skill Development Program</div>
+          <div class="cert-org">Anthropic</div>
+          <span class="cert-date">September 2026</span>
+          <a class="cert-view-link" href="./assets/cert-claude-101.png" target="_blank" rel="noopener">View Certificate ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">💬</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Live Workshop on Claude AI</div>
+          <div class="cert-org">Skill Nation</div>
+          <span class="cert-date">September 2026</span>
+          <a class="cert-view-link" href="./assets/cert-claude-ai-workshop.png" target="_blank" rel="noopener">View Certificate ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">🧠</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Understand RAG vs AI Agents vs Agentic AI — Masterclass</div>
+          <div class="cert-org">Scaler</div>
+          <span class="cert-date">August 2026</span>
+          <a class="cert-view-link" href="./assets/cert-rag-vs-agents.png" target="_blank" rel="noopener">View Certificate ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">📊</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Advanced Power BI &amp; Data Visualization Certification</div>
+          <div class="cert-org">Datacense Analytics Workshops</div>
+          <span class="cert-date">May 2026</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-3">
+        <div class="cert-icon-wrap">🏅</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Certified Scrum Master (CSM)</div>
+          <div class="cert-org">Scrum Alliance</div>
+          <span class="cert-date">July 2025</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-4">
+        <div class="cert-icon-wrap">💡</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Artificial Intelligence Course</div>
+          <div class="cert-org">1 Million Prompters, Abu Dhabi, UAE</div>
+          <span class="cert-date">March 2025</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon-wrap">📢</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Online Marketing Fundamentals</div>
+          <div class="cert-org">eMarketing Institute</div>
+          <span class="cert-date">July 2018</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal delay-2">
+        <div class="cert-icon-wrap">☕</div>
+        <div class="cert-card-body">
+          <div class="cert-name">Diploma in Java Programming</div>
+          <div class="cert-org">NIIT</div>
+          <span class="cert-date">May 2012</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon">🎓</span> Education &amp; Languages</div>
+    <div class="edu-lang-grid">
+      <div class="reveal delay-1">
+        <div class="sub-title">Education</div>
+        <div class="edu-item">
+          <div class="degree">Bachelor of Technology (B.Tech), Computer Science</div>
+          <div class="school">University of Kannur, Kerala, India &nbsp;·&nbsp; 2011</div>
+        </div>
+      </div>
+      <div class="reveal delay-2">
+        <div class="sub-title">Languages</div>
+        <div class="lang-row">
+          <div class="lang-pill">English <span>Fluent</span></div>
+          <div class="lang-pill">Malayalam <span>Native</span></div>
+          <div class="lang-pill">Hindi <span>Intermediate</span></div>
+          <div class="lang-pill">Tamil <span>Intermediate</span></div>
+          <div class="lang-pill">Arabic <span>Beginner</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<div class="contact-section" id="contact">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-title reveal"><span class="icon">📬</span> Contact</div>
+    <div class="contact-grid">
+      <div class="contact-item reveal delay-1"><div class="label">Email</div><div class="value"><a href="mailto:assumay@gmail.com">assumay@gmail.com</a></div></div>
+      <div class="contact-item reveal delay-2"><div class="label">Phone</div><div class="value"><a href="tel:+971525804840">+971 52 580 4840</a></div></div>
+      <div class="contact-item reveal delay-3"><div class="label">Location</div><div class="value">Abu Dhabi, UAE</div></div>
+      <div class="contact-item reveal delay-4"><div class="label">LinkedIn</div><div class="value"><a href="https://www.linkedin.com/in/asnasherinep/" target="_blank">linkedin.com/in/asnasherinep</a></div></div>
+      <div class="contact-item reveal delay-1"><div class="label">GitHub</div><div class="value"><a href="https://github.com/assualduaa" target="_blank">github.com/assualduaa</a></div></div>
+    </div>
+    <div class="availability-bar reveal delay-2">
+      <div class="avail-item"><div class="avail-dot"></div> <strong>Immediate Joiner</strong></div>
+      <div class="avail-item">🪪 UAE Residency Visa (Transferable)</div>
+      <div class="avail-item">💼 On-site · Hybrid · Remote</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo-row">
+    <img src="./assets/logo.png" class="footer-logo" alt="AS"
+         onerror="this.style.display='none'; document.getElementById('footerLogoSVG').style.display='block';" />
+    <svg id="footerLogoSVG" class="footer-logo-svg" style="display:none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#1E1E1E" stroke="#FF6600" stroke-width="3"/>
+      <g stroke="#FF6600" stroke-width="6" stroke-linecap="round">
+        <line x1="25" y1="25" x2="75" y2="75"/><line x1="75" y1="25" x2="25" y2="75"/>
+        <line x1="50" y1="18" x2="50" y2="82"/><line x1="18" y1="50" x2="82" y2="50"/>
+      </g>
+    </svg>
+    <span style="font-size:0.85rem;font-weight:700;color:var(--grey-dim);">Asna Sherin E P</span>
+  </div>
+  <p>AI Automation Expert | n8n Developer | Abu Dhabi, UAE &nbsp;·&nbsp; © 2026</p>
+</footer>
+
+<!-- ── CSM BADGE FLOAT (top-right) ── -->
+<img src="./assets/badge.png" class="csm-badge-float" alt="Certified Scrum Master" title="Certified Scrum Master — Scrum Alliance" />
+
+<!-- ── PRODUCT CATALOGUE FLOAT (under CSM badge) ── -->
+<button type="button" class="poster-float" data-lightbox-open aria-haspopup="dialog" aria-controls="posterLightbox"
+        aria-label="View the AI products catalogue poster" title="View AI Products Catalogue">
+  <img src="./assets/ai-products-ready-poster-thumb.webp" width="80" height="120" decoding="async" alt="" />
+  <span class="poster-float-label">View</span>
+</button>
+
+<!-- ── WHATSAPP FLOAT (bottom-right) ── -->
+<a href="https://wa.me/971525804840" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse"></div>
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.003 2.667C8.638 2.667 2.667 8.638 2.667 16.003c0 2.352.627 4.558 1.72 6.462L2.667 29.333l7.092-1.686a13.254 13.254 0 0 0 6.244 1.572c7.365 0 13.336-5.971 13.336-13.336 0-7.365-5.971-13.216-13.336-13.216zm0 24.256a11.005 11.005 0 0 1-5.614-1.536l-.403-.24-4.208 1.001.99-4.106-.263-.422A10.96 10.96 0 0 1 5.002 16c0-6.076 4.925-11.002 11.001-11.002 6.076 0 11.001 4.926 11.001 11.002 0 6.077-4.925 11.002-11.001 11.002-.001 0 0-.077 0 0zm6.032-8.233c-.33-.165-1.952-.963-2.255-1.073-.303-.11-.523-.165-.744.165s-.854 1.073-1.047 1.292c-.192.22-.385.247-.715.082-.33-.165-1.394-.514-2.655-1.638-.981-.875-1.643-1.956-1.836-2.286-.193-.33-.02-.509.145-.673.148-.148.33-.385.495-.577.165-.192.22-.33.33-.55.11-.22.055-.413-.027-.578-.083-.165-.744-1.793-1.019-2.455-.268-.644-.54-.557-.744-.567l-.633-.011c-.22 0-.578.083-.88.413-.303.33-1.155 1.128-1.155 2.75s1.183 3.19 1.348 3.41c.165.22 2.327 3.554 5.641 4.985.788.34 1.403.543 1.882.695.79.252 1.51.216 2.079.131.634-.095 1.952-.798 2.228-1.569.275-.77.275-1.43.192-1.568-.082-.138-.302-.22-.633-.385z"/>
+  </svg>
+</a>
+
+<!-- ── SCRIPTS ── -->
+<!-- ── POSTER LIGHTBOX ── -->
+<div class="lightbox" id="posterLightbox" role="dialog" aria-modal="true" aria-label="AI products catalogue poster" hidden>
+  <div class="lb-toolbar">
+    <span class="lb-title">AI Products Catalogue</span>
+    <div class="lb-actions">
+      <button type="button" class="lb-btn" data-lb="out" aria-label="Zoom out">&minus;</button>
+      <span class="lb-zoom" id="lbZoom" aria-live="polite">100%</span>
+      <button type="button" class="lb-btn" data-lb="in" aria-label="Zoom in">+</button>
+      <button type="button" class="lb-btn lb-reset" data-lb="reset" aria-label="Reset zoom">Reset</button>
+      <button type="button" class="lb-btn lb-close" data-lb="close" aria-label="Close poster">&times;</button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" data-src="./assets/ai-products-ready-poster.webp" width="1024" height="1536" draggable="false"
+         alt="AI products catalogue poster listing 11 products: RAG-based AI bot, intelligent document processing, resource optimization platform, n8n business AI assistant, n8n lead data extraction agent, Power BI dashboards, AI market analysis, e-visiting card, job search assistant, resume writing assistant and research assistant." />
+  </div>
+  <div class="lb-hint">Click the poster or use + / &minus; to zoom &middot; drag to move &middot; Esc to close</div>
+</div>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.count);
+      const duration = 1800;
+      const start = performance.now();
+      const animate = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(eased * target);
+        const suffix = el.dataset.suffix || '+';
+        el.textContent = target >= 1000 ? val.toLocaleString() + suffix : val + suffix;
+        if (p < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+  // ── Poster lightbox (zoom, drag-to-pan, keyboard, focus return) ──
+  (function () {
+    const box = document.getElementById('posterLightbox');
+    if (!box) return;
+    const stage = document.getElementById('lbStage');
+    const img = document.getElementById('lbImg');
+    const label = document.getElementById('lbZoom');
+    const MIN = 1, MAX = 3, STEP = 0.5;
+    let scale = 1, lastFocus = null, drag = null, moved = false;
+
+    function fitHeight() { return window.innerHeight - (window.innerWidth <= 700 ? 130 : 150); }
+    function apply() {
+      img.style.height = (fitHeight() * scale) + 'px';
+      stage.classList.toggle('zoomed', scale > 1);
+      label.textContent = Math.round(scale * 100) + '%';
+    }
+    function setScale(v) { scale = Math.min(MAX, Math.max(MIN, v)); apply(); if (scale === 1) { stage.scrollTop = 0; stage.scrollLeft = 0; } }
+
+    function open(trigger) {
+      lastFocus = trigger || document.activeElement;
+      if (!img.getAttribute('src')) img.src = img.dataset.src;
+      box.hidden = false;
+      document.body.classList.add('lb-lock');
+      scale = 1; apply();
+      requestAnimationFrame(() => box.classList.add('open'));
+      box.querySelector('[data-lb="close"]').focus();
+    }
+    function close() {
+      box.classList.remove('open');
+      document.body.classList.remove('lb-lock');
+      setTimeout(() => { box.hidden = true; }, 220);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('[data-lightbox-open]').forEach(b => b.addEventListener('click', () => open(b)));
+    box.addEventListener('click', (e) => {
+      const act = e.target.closest('[data-lb]');
+      if (!act) return;
+      const a = act.dataset.lb;
+      if (a === 'close') close();
+      else if (a === 'in') setScale(scale + STEP);
+      else if (a === 'out') setScale(scale - STEP);
+      else if (a === 'reset') setScale(1);
+    });
+
+    // click image to toggle zoom; click empty backdrop to close
+    img.addEventListener('click', () => { if (!moved) setScale(scale > 1 ? 1 : 2); });
+    stage.addEventListener('click', (e) => { if (e.target === stage && !moved) close(); });
+
+    // drag to pan when zoomed
+    stage.addEventListener('pointerdown', (e) => {
+      if (scale <= 1) return;
+      drag = { x: e.clientX, y: e.clientY, l: stage.scrollLeft, t: stage.scrollTop };
+      moved = false; stage.setPointerCapture(e.pointerId); stage.classList.add('dragging');
+    });
+    stage.addEventListener('pointermove', (e) => {
+      if (!drag) return;
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+      stage.scrollLeft = drag.l - dx; stage.scrollTop = drag.t - dy;
+    });
+    const endDrag = () => { drag = null; stage.classList.remove('dragging'); setTimeout(() => { moved = false; }, 0); };
+    stage.addEventListener('pointerup', endDrag);
+    stage.addEventListener('pointercancel', endDrag);
+
+    // keyboard: Esc closes, +/- zoom, Tab stays inside the dialog
+    document.addEventListener('keydown', (e) => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === '+' || e.key === '=') setScale(scale + STEP);
+      else if (e.key === '-') setScale(scale - STEP);
+      else if (e.key === '0') setScale(1);
+      else if (e.key === 'Tab') {
+        const f = box.querySelectorAll('button');
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener('resize', () => { if (!box.hidden) apply(); });
+  })();
+</script>
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
